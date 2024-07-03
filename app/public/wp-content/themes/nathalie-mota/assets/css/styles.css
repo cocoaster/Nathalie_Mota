@@ -3,6 +3,35 @@
 @import url('footer.css');
 @import url('front-page.css');
 
+@font-face {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/SpaceMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/SpaceMono-Bold.ttf') format('truetype');
+}
+body {
+    font-family: 'Space Mono', monospace;
+}
+
+/* Application de la police aux éléments de menu */
+.nav-menu li a,
+.footer-menu li a {
+    font-family: 'Space Mono', monospace;
+}
+
+/* Application de la police au nom du site */
+.site-title,
+.site-description {
+    font-family: 'Space Mono', monospace;
+}
+
 /* Autres styles */
 
 .hero {

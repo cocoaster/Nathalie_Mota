@@ -2,3 +2,5 @@
 [03-Jul-2024 01:06:59 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-customize-widgets.php on line 905
 [03-Jul-2024 01:20:59 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-customize-widgets.php on line 905
 [03-Jul-2024 01:20:59 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-customize-widgets.php on line 905
+[03-Jul-2024 02:17:53 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-customize-widgets.php on line 905
+[03-Jul-2024 02:18:00 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-customize-widgets.php on line 905
