@@ -1,7 +1,7 @@
 /* Styles for the footer */
 .site-footer {
     background-color: #fff;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #000000;
     padding: 20px 0;
 }
 
@@ -43,4 +43,9 @@
     font-weight: bold;
     text-align: center;
     width: 100%;
+}
+
+#menu-item-50{
+    padding-left: 130px;
+    padding-right: 130px;
 }

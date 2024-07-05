@@ -18,9 +18,16 @@ function nathalie_mota_enqueue_scripts() {
     wp_enqueue_style('header-css', get_template_directory_uri() . '/assets/css/header.css'); 
     wp_enqueue_style('footer-css', get_template_directory_uri() . '/assets/css/footer.css'); 
     wp_enqueue_style('front-page-css', get_template_directory_uri() . '/assets/css/front-page.css'); 
+    wp_enqueue_style('gallery-css', get_template_directory_uri() . '/assets/css/gallery.css'); 
+    wp_enqueue_style('filters-css', get_template_directory_uri() . '/assets/css/filters.css'); 
+    wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+    wp_enqueue_style('lightbox2-css', 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css');
 
     wp_enqueue_script('jquery'); 
     wp_enqueue_script('custom-js', get_template_directory_uri() . '/js/custom.js', array('jquery'), null, true);
+    wp_enqueue_script('filters-js', get_template_directory_uri() . '/js/filters.js', array(), null, true);
+    wp_enqueue_script('lightbox2-js', 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js', array('jquery'), null, true);
+
 
     wp_localize_script('custom-js', 'nathalie_mota_ajax', array(
         'url' => admin_url('admin-ajax.php')
@@ -159,20 +166,27 @@ function filter_photos() {
 
     if ($photos->have_posts()) :
         while ($photos->have_posts()) : $photos->the_post();
+            $categories = get_the_terms(get_the_ID(), 'category');
+            $category_names = wp_list_pluck($categories, 'name');
             ?>
             <div class="photo-item">
                 <a href="<?php the_permalink(); ?>" class="photo-link">
                     <?php
                     if (has_post_thumbnail()) {
-                        the_post_thumbnail('thumbnail');
+                        the_post_thumbnail('medium_large');
                     } else {
                         echo __('No image', 'nathalie-mota');
                     }
                     ?>
                 </a>
-                <a href="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" data-lightbox="image">
-                    <i class="fa fa-expand"></i>
-                </a>
+                <div class="photo-overlay">
+                    <a href="<?php the_permalink(); ?>" class="icon eye"><i class="fa fa-eye"></i></a>
+                    <a href="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" data-lightbox="image" class="icon fullscreen"><i class="fa fa-expand"></i></a>
+                    <div class="photo-info">
+                        <span class="photo-reference"><?php echo get_post_meta(get_the_ID(), '_photo_reference', true); ?></span>
+                        <span class="photo-category"><?php echo implode(', ', $category_names); ?></span>
+                    </div>
+                </div>
             </div>
             <?php
         endwhile;
@@ -182,6 +196,8 @@ function filter_photos() {
     endif;
     wp_die();
 }
+
+
 add_action('wp_ajax_filter_photos', 'filter_photos');
 add_action('wp_ajax_nopriv_filter_photos', 'filter_photos');
 
@@ -203,7 +219,7 @@ function load_more_photos() {
                 <a href="<?php the_permalink(); ?>" class="photo-link">
                     <?php
                     if (has_post_thumbnail()) {
-                        the_post_thumbnail('thumbnail');
+                        the_post_thumbnail('custom-large'); // Utiliser la taille d'image personnalisée
                     } else {
                         echo __('No image', 'nathalie-mota');
                     }
@@ -223,6 +239,7 @@ function load_more_photos() {
 }
 add_action('wp_ajax_load_more_photos', 'load_more_photos');
 add_action('wp_ajax_nopriv_load_more_photos', 'load_more_photos');
+
 
 // Supprimer la catégorie "Uncategorized" et exclure la catégorie "General" des sélecteurs personnalisés
 function remove_uncategorized_category() {
