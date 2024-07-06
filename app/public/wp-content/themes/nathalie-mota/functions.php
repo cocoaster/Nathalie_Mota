@@ -20,12 +20,14 @@ function nathalie_mota_enqueue_scripts() {
     wp_enqueue_style('front-page-css', get_template_directory_uri() . '/assets/css/front-page.css'); 
     wp_enqueue_style('gallery-css', get_template_directory_uri() . '/assets/css/gallery.css'); 
     wp_enqueue_style('filters-css', get_template_directory_uri() . '/assets/css/filters.css'); 
+    wp_enqueue_style('single-photo-css', get_template_directory_uri() . '/assets/css/single-photo.css'); 
     wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
     wp_enqueue_style('lightbox2-css', 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css');
 
     wp_enqueue_script('jquery'); 
     wp_enqueue_script('custom-js', get_template_directory_uri() . '/js/custom.js', array('jquery'), null, true);
     wp_enqueue_script('filters-js', get_template_directory_uri() . '/js/filters.js', array(), null, true);
+    wp_enqueue_script('single-photo-js', get_template_directory_uri() . '/js/single-photo.js', array(), null, true);
     wp_enqueue_script('lightbox2-js', 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js', array('jquery'), null, true);
 
 
@@ -92,6 +94,7 @@ function render_photo_details_meta_box($post) {
     wp_nonce_field('save_photo_details', 'photo_details_nonce');
     $date = get_post_meta($post->ID, '_photo_date', true);
     $reference = get_post_meta($post->ID, '_photo_reference', true);
+    $type = get_post_meta($post->ID, '_photo_type', true); // Ajouter le champ personnalisé "type"
     ?>
     <p>
         <label for="photo_date"><?php _e('Date de Prise de Vue', 'nathalie-mota'); ?></label>
@@ -100,6 +103,10 @@ function render_photo_details_meta_box($post) {
     <p>
         <label for="photo_reference"><?php _e('Référence Photo', 'nathalie-mota'); ?></label>
         <input type="text" id="photo_reference" name="photo_reference" value="<?php echo esc_attr($reference); ?>" />
+    </p>
+    <p>
+        <label for="photo_type"><?php _e('Type', 'nathalie-mota'); ?></label>
+        <input type="text" id="photo_type" name="photo_type" value="<?php echo esc_attr($type); ?>" />
     </p>
     <?php
 }
@@ -120,7 +127,11 @@ function save_photo_details($post_id) {
     if (isset($_POST['photo_reference'])) {
         update_post_meta($post_id, '_photo_reference', sanitize_text_field($_POST['photo_reference']));
     }
+    if (isset($_POST['photo_type'])) { // Sauvegarder le champ personnalisé "type"
+        update_post_meta($post_id, '_photo_type', sanitize_text_field($_POST['photo_type']));
+    }
 }
+
 add_action('save_post', 'save_photo_details');
 
 // Enregistrement des scripts AJAX pour les filtres et la pagination
@@ -196,6 +207,7 @@ function filter_photos() {
     endif;
     wp_die();
 }
+
 
 
 add_action('wp_ajax_filter_photos', 'filter_photos');
