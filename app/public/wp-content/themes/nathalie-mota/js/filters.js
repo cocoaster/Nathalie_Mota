@@ -12,6 +12,7 @@ jQuery(document).ready(function($) {
 
         $.post(nathalie_mota_ajax.url, data, function(response) {
             $('#photo-list').html(response);
+            addLightboxEvents(); // Add this line to ensure lightbox events are reattached after loading photos
         });
     }
 
@@ -34,6 +35,7 @@ jQuery(document).ready(function($) {
 
         $.post(nathalie_mota_ajax.url, data, function(response) {
             $('#photo-list').append(response);
+            addLightboxEvents(); // Add this line to ensure lightbox events are reattached after loading more photos
         });
     });
 
@@ -102,4 +104,30 @@ jQuery(document).ready(function($) {
     }
 
     document.addEventListener("click", closeAllSelect);
+
+    // Lightbox functionality
+    function addLightboxEvents() {
+        $('.photo-item img').click(function() {
+            var imgSrc = $(this).attr('src');
+            var reference = $(this).data('reference');
+            var category = $(this).data('category');
+            
+            $('#lightbox-img').attr('src', imgSrc);
+            $('#lightbox-reference').text(reference);
+            $('#lightbox-category').text(category);
+            $('#lightbox').css('display', 'block');
+        });
+
+        $('.close').click(function() {
+            $('#lightbox').css('display', 'none');
+        });
+
+        $(document).keydown(function(e) {
+            if (e.key === "Escape") {
+                $('#lightbox').css('display', 'none');
+            }
+        });
+    }
+
+    addLightboxEvents();
 });
