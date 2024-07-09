@@ -11,3 +11,196 @@
 [05-Jul-2024 02:55:35 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-customize-widgets.php on line 905
 [05-Jul-2024 02:55:35 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-customize-widgets.php on line 905
 [06-Jul-2024 21:45:45 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-customize-widgets.php on line 905
+[08-Jul-2024 15:19:57 UTC] PHP Parse error:  Unclosed '{' on line 40 in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\front-page.php on line 94
+[08-Jul-2024 15:21:13 UTC] PHP Parse error:  Unclosed '{' on line 40 in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\front-page.php on line 94
+[08-Jul-2024 19:43:23 UTC] PHP Parse error:  Unmatched '}' in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 112
+[08-Jul-2024 19:43:23 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 367
+[08-Jul-2024 19:43:23 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 368
+[08-Jul-2024 19:48:08 UTC] PHP Warning:  Undefined variable $photos in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\template-parts\gallery-loop.php on line 2
+[08-Jul-2024 19:48:08 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\template-parts\gallery-loop.php:2
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\template.php(812): require()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\template.php(745): load_template('C:\\Users\\jaill\\...', false, Array)
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\general-template.php(206): locate_template(Array, true, false, Array)
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\front-page.php(68): get_template_part('template-parts/...', '', Array)
+#4 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\jaill\\...')
+#5 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-blog-header.php(19): require_once('C:\\Users\\jaill\\...')
+#6 C:\Users\jaill\Local Sites\nathalie-mota\app\public\index.php(17): require('C:\\Users\\jaill\\...')
+#7 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\template-parts\gallery-loop.php on line 2
+[08-Jul-2024 20:36:53 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:36:53 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:36:53 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:36:53 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:36:53 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:36:53 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:36:53 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:36:53 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:36:53 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:36:53 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:36:53 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:36:53 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:36:53 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:36:53 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:36:53 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:36:53 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:42:45 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:42:45 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:42:45 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:42:45 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:42:45 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:42:45 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:42:45 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:42:45 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:42:45 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:42:45 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:42:45 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:42:45 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:42:45 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:42:45 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:42:45 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:42:45 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:42:58 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:42:58 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:42:58 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:42:58 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:42:58 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:42:58 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:42:58 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:42:58 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:42:58 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:42:58 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:42:58 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:42:58 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:42:58 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:42:58 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:42:58 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:42:58 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:46:47 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:46:47 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:46:47 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:46:47 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:46:47 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:46:47 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:46:47 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:46:47 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:46:47 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:46:47 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:46:47 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:46:47 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:46:47 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:46:47 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:46:47 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:46:47 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:49:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:49:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:49:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:49:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:49:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:49:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:49:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:49:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:49:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:49:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:49:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:49:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:49:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:49:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 20:49:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 20:49:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:03:15 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:03:15 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:03:15 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:03:15 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:03:15 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:03:15 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:03:15 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:03:15 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:03:15 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:03:15 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:03:15 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:03:15 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:03:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:03:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:03:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:03:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:06:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:06:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:06:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:06:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:06:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:06:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:06:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:06:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:06:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:06:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:06:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:06:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:06:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:06:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:06:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:06:19 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:09:18 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:09:18 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:09:18 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:09:18 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:09:18 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:09:18 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:09:18 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:09:18 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:09:18 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:09:18 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:09:18 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:09:18 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:09:18 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:09:18 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:09:18 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:09:18 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:13:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:13:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:13:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:13:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:13:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:13:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:13:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:13:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:13:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:13:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:13:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:13:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:13:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:13:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:13:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:13:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:17:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:17:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:17:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:17:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:17:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:17:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:17:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:17:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:17:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:17:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:17:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:17:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:17:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:17:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:17:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:17:16 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:22:30 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:22:30 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:22:30 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:22:30 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:22:30 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:22:30 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:22:30 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:22:30 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:22:30 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:22:30 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:22:30 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:22:30 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:22:30 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:22:30 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193
+[08-Jul-2024 21:22:30 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 183
+[08-Jul-2024 21:22:30 UTC] PHP Warning:  Undefined variable $reference in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 193

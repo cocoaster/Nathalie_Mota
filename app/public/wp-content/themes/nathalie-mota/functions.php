@@ -13,23 +13,22 @@ add_action('after_setup_theme', 'nathalie_mota_setup');
 
 // Enregistrement des scripts et styles
 function nathalie_mota_enqueue_scripts() {
+    // Enregistrement des styles et scripts nécessaires
     wp_enqueue_style('main-css', get_template_directory_uri() . '/assets/css/styles.css');
-    wp_enqueue_style('lightbox-css', get_template_directory_uri() . '/assets/css/lightbox.css');
+    wp_enqueue_style('lightbox-css', get_template_directory_uri() . '/assets/css/custom-lightbox.css');
     wp_enqueue_style('header-css', get_template_directory_uri() . '/assets/css/header.css'); 
     wp_enqueue_style('footer-css', get_template_directory_uri() . '/assets/css/footer.css'); 
     wp_enqueue_style('front-page-css', get_template_directory_uri() . '/assets/css/front-page.css'); 
     wp_enqueue_style('gallery-css', get_template_directory_uri() . '/assets/css/gallery.css'); 
     wp_enqueue_style('filters-css', get_template_directory_uri() . '/assets/css/filters.css'); 
     wp_enqueue_style('single-photo-css', get_template_directory_uri() . '/assets/css/single-photo.css'); 
-    wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
-    wp_enqueue_style('lightbox2-css', 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css');
+    wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
 
     wp_enqueue_script('jquery'); 
-    wp_enqueue_script('custom-js', get_template_directory_uri() . '/js/custom.js', array('jquery'), null, true);
-    wp_enqueue_script('filters-js', get_template_directory_uri() . '/js/filters.js', array(), null, true);
-    wp_enqueue_script('single-photo-js', get_template_directory_uri() . '/js/single-photo.js', array(), null, true);
-    wp_enqueue_script('lightbox2-js', 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js', array('jquery'), null, true);
-
+    wp_enqueue_script('custom-js', get_template_directory_uri() . '/assets/js/custom.js', array('jquery'), null, true);
+    wp_enqueue_script('filters-js', get_template_directory_uri() . '/assets/js/filters.js', array(), null, true);
+    wp_enqueue_script('single-photo-js', get_template_directory_uri() . '/assets/js/single-photo.js', array(), null, true);
+    wp_enqueue_script('custom-lightbox-js', get_template_directory_uri() . '/assets/js/custom-lightbox.js', array(), null, true);
 
     wp_localize_script('custom-js', 'nathalie_mota_ajax', array(
         'url' => admin_url('admin-ajax.php')
@@ -111,6 +110,38 @@ function render_photo_details_meta_box($post) {
     <?php
 }
 
+function render_photo_html($photos) {
+    while ($photos->have_posts()) : $photos->the_post();
+        $categories = get_the_terms(get_the_ID(), 'category');
+        $category_names = wp_list_pluck($categories, 'name');
+        $full_image_url = wp_get_attachment_url(get_post_thumbnail_id());
+        $reference = get_post_meta(get_the_ID(), '_photo_reference', true);
+        ?>
+        <div class="photo-item" 
+             data-full-image="<?php echo esc_attr($full_image_url); ?>" 
+             data-reference="<?php echo esc_attr($reference); ?>" 
+             data-category="<?php echo esc_attr(implode(', ', $category_names)); ?>">
+            <a href="<?php the_permalink(); ?>" class="photo-link">
+                <?php if (has_post_thumbnail()) : ?>
+                    <?php the_post_thumbnail('medium_large'); ?>
+                <?php else : ?>
+                    <?php _e('No image', 'nathalie-mota'); ?>
+                <?php endif; ?>
+            </a>
+            <div class="photo-overlay">
+                <a href="<?php the_permalink(); ?>" class="icon eye"><i class="fa fa-eye"></i></a>
+                <div class="icon fullscreen"><i class="fa fa-expand"></i></div>
+                <div class="photo-info">
+                    <span class="photo-reference"><?php echo esc_attr($reference); ?></span>
+                    <span class="photo-category"><?php echo esc_attr(implode(', ', $category_names)); ?></span>
+                </div>
+            </div>
+        </div>
+        <?php
+    endwhile;
+    wp_reset_postdata();
+}
+ 
 function save_photo_details($post_id) {
     if (!isset($_POST['photo_details_nonce']) || !wp_verify_nonce($_POST['photo_details_nonce'], 'save_photo_details')) {
         return;
@@ -143,6 +174,63 @@ function nathalie_mota_ajax_scripts() {
 add_action('wp_enqueue_scripts', 'nathalie_mota_ajax_scripts');
 
 function filter_photos() {
+    try {
+        $category = isset($_POST['category']) ? sanitize_text_field($_POST['category']) : '';
+        $format = isset($_POST['format']) ? sanitize_text_field($_POST['format']) : '';
+        $order = isset($_POST['order']) ? sanitize_text_field($_POST['order']) : 'DESC';
+
+        $args = array(
+            'post_type' => 'photo',
+            'posts_per_page' => 8,
+            'orderby' => 'date',
+            'order' => $order,
+            'tax_query' => array(
+                'relation' => 'AND',
+            ),
+        );
+
+        if ($category && $category != 'all') {
+            $args['tax_query'][] = array(
+                'taxonomy' => 'category',
+                'field' => 'slug',
+                'terms' => $category,
+            );
+        }
+
+        if ($format && $format != 'all') {
+            $args['tax_query'][] = array(
+                'taxonomy' => 'format',
+                'field' => 'slug',
+                'terms' => $format,
+            );
+        }
+
+        $photos = new WP_Query($args);
+        $total_photos = $photos->found_posts; // Nombre total de photos disponibles
+
+        ob_start();
+        render_photo_html($photos);
+        $html = ob_get_clean();
+
+        echo json_encode(array(
+            'html' => $html,
+            'total' => $total_photos,
+        ));
+    } catch (Exception $e) {
+        echo json_encode(array(
+            'error' => $e->getMessage(),
+        ));
+    }
+
+    wp_die();
+}
+
+add_action('wp_ajax_filter_photos', 'filter_photos');
+add_action('wp_ajax_nopriv_filter_photos', 'filter_photos');
+
+
+function load_more_photos() {
+    $offset = isset($_POST['offset']) ? intval($_POST['offset']) : 0;
     $category = isset($_POST['category']) ? sanitize_text_field($_POST['category']) : '';
     $format = isset($_POST['format']) ? sanitize_text_field($_POST['format']) : '';
     $order = isset($_POST['order']) ? sanitize_text_field($_POST['order']) : 'DESC';
@@ -150,6 +238,7 @@ function filter_photos() {
     $args = array(
         'post_type' => 'photo',
         'posts_per_page' => 8,
+        'offset' => $offset,
         'orderby' => 'date',
         'order' => $order,
         'tax_query' => array(
@@ -173,84 +262,24 @@ function filter_photos() {
         );
     }
 
-    $photos = new WP_QUERY($args);
-
-    if ($photos->have_posts()) :
-        while ($photos->have_posts()) : $photos->the_post();
-            $categories = get_the_terms(get_the_ID(), 'category');
-            $category_names = wp_list_pluck($categories, 'name');
-            ?>
-            <div class="photo-item">
-                <a href="<?php the_permalink(); ?>" class="photo-link">
-                    <?php
-                    if (has_post_thumbnail()) {
-                        the_post_thumbnail('medium_large');
-                    } else {
-                        echo __('No image', 'nathalie-mota');
-                    }
-                    ?>
-                </a>
-                <div class="photo-overlay">
-                    <a href="<?php the_permalink(); ?>" class="icon eye"><i class="fa fa-eye"></i></a>
-                    <a href="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" data-lightbox="image" class="icon fullscreen"><i class="fa fa-expand"></i></a>
-                    <div class="photo-info">
-                        <span class="photo-reference"><?php echo get_post_meta(get_the_ID(), '_photo_reference', true); ?></span>
-                        <span class="photo-category"><?php echo implode(', ', $category_names); ?></span>
-                    </div>
-                </div>
-            </div>
-            <?php
-        endwhile;
-        wp_reset_postdata();
-    else:
-        echo __('No photos found', 'nathalie-mota');
-    endif;
-    wp_die();
-}
-
-
-
-add_action('wp_ajax_filter_photos', 'filter_photos');
-add_action('wp_ajax_nopriv_filter_photos', 'filter_photos');
-
-function load_more_photos() {
-    $offset = isset($_POST['offset']) ? intval($_POST['offset']) : 0;
-
-    $args = array(
-        'post_type' => 'photo',
-        'posts_per_page' => 8,
-        'offset' => $offset,
-    );
-
     $photos = new WP_Query($args);
+    $loaded_photos = $photos->post_count; // Nombre de photos chargées
 
-    if ($photos->have_posts()) :
-        while ($photos->have_posts()) : $photos->the_post();
-            ?>
-            <div class="photo-item">
-                <a href="<?php the_permalink(); ?>" class="photo-link">
-                    <?php
-                    if (has_post_thumbnail()) {
-                        the_post_thumbnail('custom-large'); // Utiliser la taille d'image personnalisée
-                    } else {
-                        echo __('No image', 'nathalie-mota');
-                    }
-                    ?>
-                </a>
-                <a href="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" data-lightbox="image">
-                    <i class="fa fa-expand"></i>
-                </a>
-            </div>
-            <?php
-        endwhile;
-        wp_reset_postdata();
-    else:
-        echo __('No more photos found', 'nathalie-mota');
-    endif;
+    ob_start();
+    render_photo_html($photos);
+    $html = ob_get_clean();
+
+    echo json_encode(array(
+        'html' => $html,
+        'loaded' => $loaded_photos,
+    ));
+
     wp_die();
 }
+
 add_action('wp_ajax_load_more_photos', 'load_more_photos');
 add_action('wp_ajax_nopriv_load_more_photos', 'load_more_photos');
+
 
 
 // Supprimer la catégorie "Uncategorized" et exclure la catégorie "General" des sélecteurs personnalisés

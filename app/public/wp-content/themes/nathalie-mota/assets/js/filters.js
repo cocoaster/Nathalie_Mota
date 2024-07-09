@@ -1,8 +1,11 @@
 jQuery(document).ready(function($) {
+    var totalPhotos = 0;
+    var loadedPhotos = 0;
+
     function loadPhotos() {
-        var category = $('#category-filter').val();
-        var format = $('#format-filter').val();
-        var order = $('#order-filter').val();
+        var category = $('#category-filter').val() || '';
+        var format = $('#format-filter').val() || '';
+        var order = $('#order-filter').val() || 'DESC';
         var data = {
             action: 'filter_photos',
             category: category,
@@ -10,9 +13,16 @@ jQuery(document).ready(function($) {
             order: order,
         };
 
+        console.log(data);
+
         $.post(nathalie_mota_ajax.url, data, function(response) {
-            $('#photo-list').html(response);
-            addLightboxEvents(); // Add this line to ensure lightbox events are reattached after loading photos
+            var responseData = JSON.parse(response);
+            $('#photo-list').html(responseData.html);
+            totalPhotos = responseData.total;
+            loadedPhotos = $('#photo-list .photo-item').length;
+            addLightboxEvents();
+        }).fail(function(jqXHR, textStatus, errorThrown) {
+            console.error('Error: ' + textStatus, errorThrown);
         });
     }
 
@@ -22,9 +32,13 @@ jQuery(document).ready(function($) {
 
     $('#load-more').click(function() {
         var offset = $('#photo-list .photo-item').length;
-        var category = $('#category-filter').val();
-        var format = $('#format-filter').val();
-        var order = $('#order-filter').val();
+        if (loadedPhotos >= totalPhotos) {
+            return;
+        }
+
+        var category = $('#category-filter').val() || '';
+        var format = $('#format-filter').val() || '';
+        var order = $('#order-filter').val() || 'DESC';
         var data = {
             action: 'load_more_photos',
             offset: offset,
@@ -33,9 +47,15 @@ jQuery(document).ready(function($) {
             order: order,
         };
 
+        console.log(data);
+
         $.post(nathalie_mota_ajax.url, data, function(response) {
-            $('#photo-list').append(response);
-            addLightboxEvents(); // Add this line to ensure lightbox events are reattached after loading more photos
+            var responseData = JSON.parse(response);
+            $('#photo-list').append(responseData.html);
+            loadedPhotos += responseData.loaded;
+            addLightboxEvents();
+        }).fail(function(jqXHR, textStatus, errorThrown) {
+            console.error('Error: ' + textStatus, errorThrown);
         });
     });
 
@@ -91,7 +111,7 @@ jQuery(document).ready(function($) {
         y = document.getElementsByClassName("select-selected");
         for (i = 0; i < y.length; i++) {
             if (elmnt == y[i]) {
-                arrNo.push(i)
+                arrNo.push(i);
             } else {
                 y[i].classList.remove("select-arrow-active");
             }
@@ -104,30 +124,4 @@ jQuery(document).ready(function($) {
     }
 
     document.addEventListener("click", closeAllSelect);
-
-    // Lightbox functionality
-    function addLightboxEvents() {
-        $('.photo-item img').click(function() {
-            var imgSrc = $(this).attr('src');
-            var reference = $(this).data('reference');
-            var category = $(this).data('category');
-            
-            $('#lightbox-img').attr('src', imgSrc);
-            $('#lightbox-reference').text(reference);
-            $('#lightbox-category').text(category);
-            $('#lightbox').css('display', 'block');
-        });
-
-        $('.close').click(function() {
-            $('#lightbox').css('display', 'none');
-        });
-
-        $(document).keydown(function(e) {
-            if (e.key === "Escape") {
-                $('#lightbox').css('display', 'none');
-            }
-        });
-    }
-
-    addLightboxEvents();
 });
