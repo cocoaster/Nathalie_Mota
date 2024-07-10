@@ -88,28 +88,29 @@ get_header(); ?>
             $related_photos = new WP_Query($related_args);
 
             if ($related_photos->have_posts()) :
+                
                 while ($related_photos->have_posts()) : $related_photos->the_post();
-                    ?>
-                    <div class="photo-item">
-                        <a href="<?php the_permalink(); ?>" class="photo-link">
-                            <?php
-                            if (has_post_thumbnail()) {
-                                the_post_thumbnail('large', array('class' => 'photo-thumbnail-2'));
-                            } else {
-                                echo __('No image', 'nathalie-mota');
-                            }
-                            ?>
-                            <div class="overlay">
-                            <a href="<?php the_permalink(); ?>" class="info-icon"><i class="fa fa-eye"></i></a>
-                            <a href="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" data-lightbox="image" class="lightbox-icon"><i class="fa fa-expand"></i></a>
-                        </div>
-                        </a>
-                        <a href="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" data-lightbox="image" class="lightbox-icon">
-                            <i class="fa fa-expand"></i>
-                        </a>
-                        <a href="<?php the_permalink(); ?>" class="info-icon">
-                            <i class="fa fa-eye"></i>
-                        </a>
+                $image_url = wp_get_attachment_url(get_post_thumbnail_id());
+                $reference = get_post_meta(get_the_ID(), '_photo_reference', true);
+                $categories = get_the_terms(get_the_ID(), 'category');
+                $category_names = wp_list_pluck($categories, 'name');
+                ?>
+                <div class="photo-item" 
+                     data-full-image="<?php echo esc_attr($image_url); ?>" 
+                     data-reference="<?php echo esc_attr($reference); ?>" 
+                     data-category="<?php echo esc_attr(implode(', ', $category_names)); ?>">
+                    <a href="<?php the_permalink(); ?>" class="photo-link">
+                        <?php if (has_post_thumbnail()) : ?>
+                            <?php the_post_thumbnail('large'); ?>
+                        <?php else : ?>
+                            <?php _e('No image', 'nathalie-mota'); ?>
+                        <?php endif; ?>
+                    </a>
+
+                            <div class="photo-overlay">
+                    <a href="<?php the_permalink(); ?>" class="icon eye"><i class="fa fa-eye"></i></a>
+                    <span class="icon fullscreen" data-photo-id="<?php the_ID(); ?>"><i class="fa fa-expand"></i></span>
+                </div>
                     </div>
                     <?php
                 endwhile;
@@ -120,6 +121,18 @@ get_header(); ?>
             ?>
         </div>
     </div>
+</div>
+
+<!-- Lightbox -->
+<div id="custom-lightbox" class="custom-lightbox" style="display: none;">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div id="lightbox-photo-datas">
+        <div class="caption"></div>
+        <div class="category"></div>
+    </div>
+    <a class="custom-prev"><i class="fas fa-arrow-left-long"></i> Précédente</a>
+    <a class="custom-next">Suivante <i class="fas fa-arrow-right-long"></i></a>
 </div>
 <?php get_footer(); ?>
 

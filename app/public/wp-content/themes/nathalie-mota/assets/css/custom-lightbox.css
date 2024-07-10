@@ -8,8 +8,6 @@
     height: 100%;
     overflow: hidden;
     background-color: rgba(0,0,0,0.9);
-    margin-left: auto;
-    margin-right: auto;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -20,9 +18,9 @@
     max-height: 80%;
 }
 
-#lightbox-img{
-margin-top: 5%;
-margin-bottom: auto;
+#lightbox-img {
+    margin-top: 5%;
+    margin-bottom: auto;
 }
 
 .info-container {
@@ -31,10 +29,9 @@ margin-bottom: auto;
     padding: 10px 20px;
     width: 80%;
     margin: 0 auto;
-   
 }
 
-#lightbox-photo-datas{
+#lightbox-photo-datas {
     display: flex;
     justify-content: space-between;
     margin-left: auto;
@@ -45,7 +42,6 @@ margin-bottom: auto;
 .caption, .category {
     display: block;
     width: 100%;
-   
     color: #fff;
 }
 
@@ -103,7 +99,6 @@ margin-bottom: auto;
     background-color: rgba(0,0,0,0.8);
 }
 
- 
-.icon:hover{
+.icon:hover {
     cursor: pointer;
 }

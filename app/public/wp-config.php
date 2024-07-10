@@ -59,7 +59,6 @@ define( 'LOGGED_IN_SALT',    '&(#L`~C(KGM6BJG`^&+)yOxY0;le!`gRGPJ[7:FAHP#,0uE)qk
 define( 'NONCE_SALT',        'NK=y0_fYnfkw%`?zKZpW~C^.J3&-$2B@f{F25f8Tx1_{X~r:DF=y#O>Xlx,ujG!_' );
 define( 'WP_CACHE_KEY_SALT', '*A`.1L64+GV]?ODXCs9TIZH1%}^{EYf~NCwBz]nb%eSiTt^9;<{6BG<$wCdi=uwp' );
 
-
 /**#@-*/
 
 /**
@@ -70,10 +69,11 @@ define( 'WP_CACHE_KEY_SALT', '*A`.1L64+GV]?ODXCs9TIZH1%}^{EYf~NCwBz]nb%eSiTt^9;<
  */
 $table_prefix = 'wp_';
 
-
 /* Add any custom values between this line and the "stop editing" line. */
-
-
+define('WP_DEBUG', true);
+define('WP_DEBUG_LOG', true);
+define('WP_DEBUG_DISPLAY', false);
+@ini_set('display_errors', 0);
 
 /**
  * For developers: WordPress debugging mode.
@@ -87,11 +87,8 @@ $table_prefix = 'wp_';
  *
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
-if ( ! defined( 'WP_DEBUG' ) ) {
-	define( 'WP_DEBUG', false );
-}
-
 define( 'WP_ENVIRONMENT_TYPE', 'local' );
+
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */

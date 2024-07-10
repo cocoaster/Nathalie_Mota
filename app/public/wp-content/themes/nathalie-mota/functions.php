@@ -22,10 +22,12 @@ function nathalie_mota_enqueue_scripts() {
     wp_enqueue_style('gallery-css', get_template_directory_uri() . '/assets/css/gallery.css'); 
     wp_enqueue_style('filters-css', get_template_directory_uri() . '/assets/css/filters.css'); 
     wp_enqueue_style('single-photo-css', get_template_directory_uri() . '/assets/css/single-photo.css'); 
+    wp_enqueue_style('contact-css', get_template_directory_uri() . '/assets/css/contact.css'); 
     wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
 
     wp_enqueue_script('jquery'); 
     wp_enqueue_script('custom-js', get_template_directory_uri() . '/assets/js/custom.js', array('jquery'), null, true);
+    wp_enqueue_script('contact-js', get_template_directory_uri() . '/assets/js/contact.js', array('jquery'), null, true);
     wp_enqueue_script('filters-js', get_template_directory_uri() . '/assets/js/filters.js', array(), null, true);
     wp_enqueue_script('single-photo-js', get_template_directory_uri() . '/assets/js/single-photo.js', array(), null, true);
     wp_enqueue_script('custom-lightbox-js', get_template_directory_uri() . '/assets/js/custom-lightbox.js', array(), null, true);
@@ -35,6 +37,7 @@ function nathalie_mota_enqueue_scripts() {
     ));
 }
 add_action('wp_enqueue_scripts', 'nathalie_mota_enqueue_scripts');
+
 
 // Enregistrement du Custom Post Type pour les photos et les taxonomies personnalisées
 function nathalie_mota_custom_post_types() {
@@ -385,5 +388,7 @@ function nathalie_mota_customizer_register($wp_customize) {
     )));
 }
 add_action('customize_register', 'nathalie_mota_customizer_register');
+
+
 
 ?>

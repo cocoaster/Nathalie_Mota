@@ -11,6 +11,7 @@ if ($photos->have_posts()) :
     while ($photos->have_posts()) : $photos->the_post();
         $image_url = wp_get_attachment_url(get_post_thumbnail_id());
         $medium_large_url = get_the_post_thumbnail_url(get_the_ID(), 'medium_large');
+  
         ?>
         <div class="photo-item" data-full-image="<?php echo esc_url($image_url); ?>" data-title="<?php the_title(); ?>">
             <a href="<?php the_permalink(); ?>" class="photo-link">

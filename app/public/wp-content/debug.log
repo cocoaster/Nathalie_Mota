@@ -1,0 +1,333 @@
+[10-Jul-2024 00:32:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function render_photo_html() in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\inc\ajax-handlers.php:37
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-hook.php(324): filter_photos('')
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin-ajax.php(207): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\inc\ajax-handlers.php on line 37
+[10-Jul-2024 00:33:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function render_photo_html() in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\inc\ajax-handlers.php:37
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-hook.php(324): filter_photos('')
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin-ajax.php(207): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\inc\ajax-handlers.php on line 37
+[10-Jul-2024 00:34:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function render_photo_html() in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\inc\ajax-handlers.php:37
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-hook.php(324): filter_photos('')
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin-ajax.php(207): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\inc\ajax-handlers.php on line 37
+[10-Jul-2024 01:14:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function render_photo_html() in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\inc\ajax-handlers.php:47
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-hook.php(324): filter_photos('')
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin-ajax.php(207): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\inc\ajax-handlers.php on line 47
+[10-Jul-2024 01:14:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function render_photo_html() in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\inc\ajax-handlers.php:47
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-hook.php(324): filter_photos('')
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin-ajax.php(207): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\inc\ajax-handlers.php on line 47
+[10-Jul-2024 01:18:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function render_photo_html() in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\inc\ajax-handlers.php:47
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-hook.php(324): filter_photos('')
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin-ajax.php(207): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\inc\ajax-handlers.php on line 47
+[10-Jul-2024 01:19:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function render_photo_html() in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\inc\ajax-handlers.php:47
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-hook.php(324): filter_photos('')
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin-ajax.php(192): do_action('wp_ajax_filter_...')
+#4 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\inc\ajax-handlers.php on line 47
+[10-Jul-2024 01:31:08 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\inc\contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:31:08 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\inc\contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\jaill\\...')
+#4 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:31:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 367
+[10-Jul-2024 01:31:08 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 368
+[10-Jul-2024 01:32:35 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:32:35 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\jaill\\...')
+#4 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:33:09 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:33:09 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\jaill\\...')
+#4 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:34:36 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:34:36 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\jaill\\...')
+#4 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:35:10 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:35:10 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\jaill\\...')
+#4 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:15 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:15 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:15 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin.php(34): require_once('C:\\Users\\jaill\\...')
+#4 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\nav-menus.php(13): require_once('C:\\Users\\jaill\\...')
+#5 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:15 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\jaill\\...')
+#4 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:15 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:15 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin.php(34): require_once('C:\\Users\\jaill\\...')
+#4 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\nav-menus.php(13): require_once('C:\\Users\\jaill\\...')
+#5 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:18 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:18 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin.php(34): require_once('C:\\Users\\jaill\\...')
+#4 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\index.php(10): require_once('C:\\Users\\jaill\\...')
+#5 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:20 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:20 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin.php(34): require_once('C:\\Users\\jaill\\...')
+#4 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\index.php(10): require_once('C:\\Users\\jaill\\...')
+#5 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:20 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:20 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-blog-header.php(13): require_once('C:\\Users\\jaill\\...')
+#4 C:\Users\jaill\Local Sites\nathalie-mota\app\public\index.php(17): require('C:\\Users\\jaill\\...')
+#5 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:21 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:21 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin.php(34): require_once('C:\\Users\\jaill\\...')
+#4 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\index.php(10): require_once('C:\\Users\\jaill\\...')
+#5 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin.php(34): require_once('C:\\Users\\jaill\\...')
+#4 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\nav-menus.php(13): require_once('C:\\Users\\jaill\\...')
+#5 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:21 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin.php(34): require_once('C:\\Users\\jaill\\...')
+#4 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\index.php(10): require_once('C:\\Users\\jaill\\...')
+#5 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:28 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:28 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-blog-header.php(13): require_once('C:\\Users\\jaill\\...')
+#4 C:\Users\jaill\Local Sites\nathalie-mota\app\public\index.php(17): require('C:\\Users\\jaill\\...')
+#5 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:28 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:28 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-blog-header.php(13): require_once('C:\\Users\\jaill\\...')
+#4 C:\Users\jaill\Local Sites\nathalie-mota\app\public\index.php(17): require('C:\\Users\\jaill\\...')
+#5 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:29 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:29 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-blog-header.php(13): require_once('C:\\Users\\jaill\\...')
+#4 C:\Users\jaill\Local Sites\nathalie-mota\app\public\index.php(17): require('C:\\Users\\jaill\\...')
+#5 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:33 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:33 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\jaill\\...')
+#4 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:45 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:36:45 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-blog-header.php(13): require_once('C:\\Users\\jaill\\...')
+#4 C:\Users\jaill\Local Sites\nathalie-mota\app\public\index.php(17): require('C:\\Users\\jaill\\...')
+#5 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:37:39 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:37:39 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\jaill\\...')
+#4 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:37:41 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:37:41 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-blog-header.php(13): require_once('C:\\Users\\jaill\\...')
+#4 C:\Users\jaill\Local Sites\nathalie-mota\app\public\index.php(17): require('C:\\Users\\jaill\\...')
+#5 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:37:41 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:37:41 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-blog-header.php(13): require_once('C:\\Users\\jaill\\...')
+#4 C:\Users\jaill\Local Sites\nathalie-mota\app\public\index.php(17): require('C:\\Users\\jaill\\...')
+#5 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:39:40 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:39:40 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\jaill\\...')
+#4 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:41:41 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:41:41 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\jaill\\...')
+#4 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:43:42 UTC] PHP Warning:  require_once(C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php): Failed to open stream: No such file or directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:43:42 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\jaill\Local Sites\nathalie-mota\app\public/wp-content/themes/nathalie-mota/inc/contact-form.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:15
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-settings.php(663): include()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-config.php(107): require_once('C:\\Users\\jaill\\...')
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-load.php(50): require_once('C:\\Users\\jaill\\...')
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\jaill\\...')
+#4 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 15
+[10-Jul-2024 01:45:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function render_photo_html() in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\inc\ajax-handlers.php:47
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-hook.php(324): filter_photos('')
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin-ajax.php(192): do_action('wp_ajax_filter_...')
+#4 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\inc\ajax-handlers.php on line 47
+[10-Jul-2024 01:54:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function render_photo_html() in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\inc\ajax-handlers.php:47
+Stack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-hook.php(324): filter_photos('')
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin-ajax.php(207): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\inc\ajax-handlers.php on line 47
+[10-Jul-2024 01:55:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function render_photo_html() in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\inc\ajax-handlers.php:47
+S[10-Jul-2024 06:00:12 UTC] PHP Warning:  Undefined variable $photos in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\front-page.php on line 60
+[10-Jul-2024 06:00:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\template-parts\gallery-loop.php:10
+Stack trace:tack trace:
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-hook.php(324): filter_photos('')
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-admin\admin-ajax.php(207): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\inc\ajax-handlers.php on line 47
+
+#0 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\template.php(812): require()
+#1 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\template.php(745): load_template('C:\\Users\\jaill\\...', false, Array)
+#2 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\general-template.php(206): locate_template(Array, true, false, Array)
+#3 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\front-page.php(60): get_template_part('template-parts/...', '', Array)
+#4 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\jaill\\...')
+#5 C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-blog-header.php(19): require_once('C:\\Users\\jaill\\...')
+#6 C:\Users\jaill\Local Sites\nathalie-mota\app\public\index.php(17): require('C:\\Users\\jaill\\...')
+#7 {main}
+  thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\template-parts\gallery-loop.php on line 10
