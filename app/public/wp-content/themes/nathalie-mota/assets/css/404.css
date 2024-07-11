@@ -1,0 +1,30 @@
+.error-404 {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+}
+
+.error-404 .page-header .page-title {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #ff6b6b;
+}
+
+.error-404 .page-content {
+    font-size: 1.2em;
+    color: #6c757d;
+}
+
+.error-404 .page-content p {
+    margin-bottom: 20px;
+}
+
+.error-404 .page-content a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.error-404 .page-content a:hover {
+    text-decoration: underline;
+}
