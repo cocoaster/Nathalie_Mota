@@ -2,10 +2,10 @@ jQuery(document).ready(function($) {
     var totalPhotos = 0;
     var loadedPhotos = 0;
 
-    function loadPhotos() {
-        var category = $('#category-filter').val() || '';
-        var format = $('#format-filter').val() || '';
-        var order = $('#order-filter').val() || 'DESC';
+    function loadPhotos(resetFilters = false) {
+        var category = resetFilters ? '' : $('#category-filter').val() || '';
+        var format = resetFilters ? '' : $('#format-filter').val() || '';
+        var order = resetFilters ? 'DESC' : $('#order-filter').val() || 'DESC';
         var data = {
             action: 'filter_photos',
             category: category,
@@ -21,9 +21,26 @@ jQuery(document).ready(function($) {
             totalPhotos = responseData.total;
             loadedPhotos = $('#photo-list .photo-item').length;
             addLightboxEvents();
+
+            if (resetFilters) {
+                resetFilterSelectors();
+            }
         }).fail(function(jqXHR, textStatus, errorThrown) {
             console.error('Error: ' + textStatus, errorThrown);
         });
+    }
+
+    function resetFilterSelectors() {
+        $('#category-filter').val('');
+        $('#format-filter').val('');
+        $('#order-filter').val('DESC');
+        
+        $('.select-selected').each(function() {
+            var defaultText = $(this).siblings('select').find('option:selected').text();
+            $(this).text(defaultText);
+        });
+
+        $('.select-items .same-as-selected').removeClass('same-as-selected');
     }
 
     $('#category-filter, #format-filter, #order-filter').change(function() {
@@ -32,8 +49,16 @@ jQuery(document).ready(function($) {
 
     $('#load-more').click(function() {
         var offset = $('#photo-list .photo-item').length;
+
         if (loadedPhotos >= totalPhotos) {
-            return;
+            if (!$('#category-filter').val() && !$('#format-filter').val() && $('#order-filter').val() === 'DESC') {
+                alert("Toutes les photos sont déjà chargées.");
+                return;
+            } else {
+                loadPhotos(true);
+                alert("Il n'y a plus de photos à afficher correspondant à votre sélection. Réinitialisation des filtres.");
+                return;
+            }
         }
 
         var category = $('#category-filter').val() || '';
