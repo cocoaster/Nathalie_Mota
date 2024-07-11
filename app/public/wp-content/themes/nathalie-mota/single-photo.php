@@ -96,9 +96,9 @@ get_header(); ?>
                 $category_names = wp_list_pluck($categories, 'name');
                 ?>
                 <div class="photo-item" 
-                     data-full-image="<?php echo esc_attr($image_url); ?>" 
-                     data-reference="<?php echo esc_attr($reference); ?>" 
-                     data-category="<?php echo esc_attr(implode(', ', $category_names)); ?>">
+                    data-full-image="<?php echo esc_attr($image_url); ?>" 
+                    data-reference="<?php echo esc_attr($reference); ?>" 
+                    data-category="<?php echo esc_attr(implode(', ', $category_names)); ?>">
                     <a href="<?php the_permalink(); ?>" class="photo-link">
                         <?php if (has_post_thumbnail()) : ?>
                             <?php the_post_thumbnail('large'); ?>
@@ -106,12 +106,11 @@ get_header(); ?>
                             <?php _e('No image', 'nathalie-mota'); ?>
                         <?php endif; ?>
                     </a>
-
-                            <div class="photo-overlay">
-                    <a href="<?php the_permalink(); ?>" class="icon eye"><i class="fa fa-eye"></i></a>
-                    <span class="icon fullscreen" data-photo-id="<?php the_ID(); ?>"><i class="fa fa-expand"></i></span>
-                </div>
+                    <div class="photo-overlay">
+                        <a href="<?php the_permalink(); ?>" class="icon eye"><i class="fa fa-eye"></i></a>
+                        <span class="icon fullscreen" data-photo-id="<?php the_ID(); ?>"><i class="fa fa-expand"></i></span>
                     </div>
+                </div>
                     <?php
                 endwhile;
                 wp_reset_postdata();
