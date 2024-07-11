@@ -5,6 +5,7 @@
 @import url('gallery.css');
 @import url('filters.css');
 @import url('single-photo.css');
+@import url('contact.css');
 
 @font-face {
     font-family: 'Space Mono';

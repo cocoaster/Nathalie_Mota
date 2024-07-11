@@ -101,3 +101,6 @@
 [11-Jul-2024 01:09:44 UTC] Photo Reference: 
 [11-Jul-2024 01:09:44 UTC] Message: poupou
 [11-Jul-2024 01:09:46 UTC] Emails sent successfully.
+[11-Jul-2024 01:31:06 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-customize-widgets.php on line 905
+[11-Jul-2024 01:31:17 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-customize-widgets.php on line 905
+[11-Jul-2024 01:34:25 UTC] PHP Warning:  Undefined variable $network in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\plugins\ewww-image-optimizer\common.php on line 12284
