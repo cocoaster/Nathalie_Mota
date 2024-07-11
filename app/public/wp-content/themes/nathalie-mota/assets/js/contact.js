@@ -2,6 +2,7 @@ jQuery(document).ready(function($) {
     var contactModal = document.getElementById("contact-modal");
     var contactButtons = document.querySelectorAll(".contact-menu-item a, .open-contact-modal");
     var closeBtn = document.getElementsByClassName("close")[0];
+    var contactForm = document.getElementById("contact-form");
 
     if (contactModal && closeBtn) {
         contactButtons.forEach(function(button) {
@@ -17,12 +18,14 @@ jQuery(document).ready(function($) {
         closeBtn.onclick = function() {
             console.log("Bouton de fermeture cliqué");
             contactModal.style.display = "none";
+            contactForm.reset(); // Réinitialise les champs de formulaire
         }
 
         window.onclick = function(event) {
             if (event.target == contactModal) {
                 console.log("Clic en dehors de la modal détecté");
                 contactModal.style.display = "none";
+                contactForm.reset(); // Réinitialise les champs de formulaire
             }
         }
 
@@ -44,6 +47,7 @@ jQuery(document).ready(function($) {
                 if (response.success) {
                     alert(response.data.message || "Votre message a bien été envoyé. Vous allez recevoir un e-mail de confirmation.");
                     contactModal.style.display = "none";
+                    contactForm.reset(); // Réinitialise les champs de formulaire
                 } else {
                     alert(response.data.message || "Une erreur est survenue. Veuillez réessayer.");
                 }
