@@ -12,7 +12,6 @@ function nathalie_mota_setup() {
 add_action('after_setup_theme', 'nathalie_mota_setup');
 
 // Enregistrement des scripts et styles
-// Enregistrement des scripts et styles
 function nathalie_mota_enqueue_scripts() {
     // Enregistrement des styles et scripts nécessaires
     wp_enqueue_style('main-css', get_template_directory_uri() . '/assets/css/styles.css');
@@ -118,6 +117,7 @@ function render_photo_details_meta_box($post) {
     <?php
 }
 
+// Fonction pour afficher les photos
 function render_photo_html($photos) {
     while ($photos->have_posts()) : $photos->the_post();
         $categories = get_the_terms(get_the_ID(), 'category');
@@ -181,6 +181,7 @@ function nathalie_mota_ajax_scripts() {
 }
 add_action('wp_enqueue_scripts', 'nathalie_mota_ajax_scripts');
 
+// Filtrer les photos via AJAX
 function filter_photos() {
     try {
         $category = isset($_POST['category']) ? sanitize_text_field($_POST['category']) : '';
@@ -236,7 +237,7 @@ function filter_photos() {
 add_action('wp_ajax_filter_photos', 'filter_photos');
 add_action('wp_ajax_nopriv_filter_photos', 'filter_photos');
 
-
+// Charger plus de photos via AJAX
 function load_more_photos() {
     $offset = isset($_POST['offset']) ? intval($_POST['offset']) : 0;
     $category = isset($_POST['category']) ? sanitize_text_field($_POST['category']) : '';

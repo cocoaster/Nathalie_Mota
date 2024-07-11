@@ -57,17 +57,9 @@ get_header(); ?>
     <div id="photo-list"></div>
     <button id="load-more"><?php _e('Voir plus de photos', 'nathalie-mota'); ?></button>
 
-    <!-- lightbox -->
-<div id="custom-lightbox" class="custom-lightbox" style="display: none;">
-    <span class="close">&times;</span>
-    <img class="lightbox-content" id="lightbox-img">
-    <div id="lightbox-photo-datas">
-        <div class="caption"></div>
-        <div class="category"></div>
-    </div>
-    <a class="custom-prev"><i class="fas fa-arrow-left-long"></i> Précédente</a>
-    <a class="custom-next">Suivante <i class="fas fa-arrow-right-long"></i></a>
-</div>
+    <!-- Inclure la lightbox -->
+    <?php get_template_part('template-parts/lightbox'); ?>
 
+</div>
 
 <?php get_footer(); ?>
