@@ -396,6 +396,7 @@ function nathalie_mota_customizer_register($wp_customize) {
 add_action('customize_register', 'nathalie_mota_customizer_register');
 
 // Formulaire de contact
+// Formulaire de contact
 function submit_contact_form() {
     // Vérifier les permissions
     if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'submit_contact_form_nonce')) {
@@ -422,6 +423,26 @@ function submit_contact_form() {
         return;
     }
 
+    // Valider la référence de la photo si elle est fournie
+    if (!empty($photo_reference)) {
+        $photo_query = new WP_Query(array(
+            'post_type' => 'photo',
+            'meta_query' => array(
+                array(
+                    'key' => '_photo_reference',
+                    'value' => $photo_reference,
+                    'compare' => '='
+                )
+            )
+        ));
+
+        if (!$photo_query->have_posts()) {
+            error_log('Invalid photo reference.');
+            wp_send_json_error(array('message' => 'La référence de la photo est invalide.'));
+            return;
+        }
+    }
+
     // Envoyer un e-mail à l'administrateur
     $to_admin = get_option('admin_email');
     $subject_admin = "Nouveau message de $name";
@@ -446,6 +467,7 @@ function submit_contact_form() {
 }
 add_action('wp_ajax_submit_contact_form', 'submit_contact_form');
 add_action('wp_ajax_nopriv_submit_contact_form', 'submit_contact_form');
+
 
 
 

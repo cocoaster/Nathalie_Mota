@@ -7,12 +7,8 @@ jQuery(document).ready(function($) {
         contactButtons.forEach(function(button) {
             button.addEventListener("click", function(event) {
                 event.preventDefault(); // Empêche le comportement par défaut du lien
-                var photoReference = button.getAttribute("data-photo-reference");
-                if (photoReference) {
-                    document.getElementById("photo-reference").value = photoReference;
-                } else {
-                    document.getElementById("photo-reference").value = '';
-                }
+                var photoReference = button.getAttribute("data-photo-reference") || '';
+                document.getElementById("photo-reference").value = photoReference;
                 console.log("Bouton de contact cliqué");
                 contactModal.style.display = "block";
             });
