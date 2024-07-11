@@ -395,7 +395,33 @@ function nathalie_mota_customizer_register($wp_customize) {
 }
 add_action('customize_register', 'nathalie_mota_customizer_register');
 
-// Formulaire de contact
+// Récupèrer les articles précédents et suivants en fonction de la date de prise de vue
+function get_all_photos_sorted_by_date() {
+    global $wpdb;
+
+    $query = "
+        SELECT p.ID
+        FROM {$wpdb->posts} p
+        JOIN {$wpdb->postmeta} pm ON p.ID = pm.post_id
+        WHERE p.post_type = 'photo'
+          AND p.post_status = 'publish'
+          AND pm.meta_key = '_photo_date'
+        ORDER BY pm.meta_value ASC, p.ID ASC";
+
+    return $wpdb->get_results($query);
+}
+
+// Obtenir l'index de la photo actuelle
+function get_current_photo_index($current_post_id, $photos) {
+    foreach ($photos as $index => $photo) {
+        if ($photo->ID == $current_post_id) {
+            return $index;
+        }
+    }
+    return -1; // Indice non trouvé
+}
+
+
 // Formulaire de contact
 function submit_contact_form() {
     // Vérifier les permissions

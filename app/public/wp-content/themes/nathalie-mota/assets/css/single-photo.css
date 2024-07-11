@@ -12,7 +12,7 @@
 }
 
 .photo-fields-info {
-    width: 50%;
+    width: 46%;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@
     font-size: 56px;
     font-style: italic;
     font-weight: 500;
-    width: 45%;
+    width: 4%;
 }
 
 .photo-fields-info p {
@@ -39,9 +39,9 @@
 }
 
 .photo-thumbnail, img {
-    width: 45%;
-    height: 1000px;
-    object-fit: cover;
+    width: 50%;
+    height: auto;
+    object-fit: contain;
     object-position: center center;
     vertical-align: bottom;
 }
@@ -57,7 +57,7 @@
 }
 
 .contact-link {
-    width: 52.1%;
+    width: 48%;
     display: flex;
     justify-content: space-between;
 }

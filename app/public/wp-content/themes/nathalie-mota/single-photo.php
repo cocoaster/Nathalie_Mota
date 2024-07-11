@@ -6,6 +6,7 @@ Template Name: Single Photo
 get_header(); ?>
 <div class="single-photo-container">
     <div id="photo-details" class="photo-details">
+        
         <!-- Bloc de gauche (informations) -->
         <div class="photo-fields-info">
             <h1 class="field"><?php the_title(); ?></h1>
@@ -35,23 +36,26 @@ get_header(); ?>
             </div>
             
         <div class="navigation-links">
-            <?php
-            $prev_post = get_previous_post();
-            if ($prev_post) {
-                $prev_thumbnail = get_the_post_thumbnail_url($prev_post->ID, 'thumbnail');
-                echo '<a href="' . get_permalink($prev_post->ID) . '" class="prev" data-thumbnail="' . $prev_thumbnail . '">← ' . __('', 'nathalie-mota') . '</a>';
-            }
+    <?php
+ $all_photos = get_all_photos_sorted_by_date();
+ $current_index = get_current_photo_index(get_the_ID(), $all_photos);
+ if ($current_index > 0) {
+    $prev_photo = $all_photos[$current_index - 1];
+    $prev_thumbnail = get_the_post_thumbnail_url($prev_photo->ID, 'thumbnail');
+    echo '<a href="' . get_permalink($prev_photo->ID) . '" class="prev" data-thumbnail="' . $prev_thumbnail . '">← ' . __('', 'nathalie-mota') . '</a>';
+}
 
-            $next_post = get_next_post();
-            if ($next_post) {
-                $next_thumbnail = get_the_post_thumbnail_url($next_post->ID, 'thumbnail');
-                echo '<a href="' . get_permalink($next_post->ID) . '" class="next" data-thumbnail="' . $next_thumbnail . '">' . __('', 'nathalie-mota') . ' →</a>';
-            }
-            ?>
-            <div id="thumbnail-preview">
-                <img id="thumbnail-image" src="" alt="Thumbnail">
-            </div>
-        </div>  
+if ($current_index < count($all_photos) - 1) {
+    $next_photo = $all_photos[$current_index + 1];
+    $next_thumbnail = get_the_post_thumbnail_url($next_photo->ID, 'thumbnail');
+    echo '<a href="' . get_permalink($next_photo->ID) . '" class="next" data-thumbnail="' . $next_thumbnail . '">' . __('', 'nathalie-mota') . ' →</a>';
+}
+    ?>
+    <div id="thumbnail-preview">
+        <img id="thumbnail-image" src="" alt="Thumbnail">
+    </div>
+</div>
+  
     </div>
 
     <!-- Section "Vous aimerez aussi" -->
