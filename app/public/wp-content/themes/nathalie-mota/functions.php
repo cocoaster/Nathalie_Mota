@@ -12,6 +12,7 @@ function nathalie_mota_setup() {
 add_action('after_setup_theme', 'nathalie_mota_setup');
 
 // Enregistrement des scripts et styles
+// Enregistrement des scripts et styles
 function nathalie_mota_enqueue_scripts() {
     // Enregistrement des styles et scripts nécessaires
     wp_enqueue_style('main-css', get_template_directory_uri() . '/assets/css/styles.css');
@@ -32,11 +33,14 @@ function nathalie_mota_enqueue_scripts() {
     wp_enqueue_script('single-photo-js', get_template_directory_uri() . '/assets/js/single-photo.js', array(), null, true);
     wp_enqueue_script('custom-lightbox-js', get_template_directory_uri() . '/assets/js/custom-lightbox.js', array(), null, true);
 
-    wp_localize_script('custom-js', 'nathalie_mota_ajax', array(
-        'url' => admin_url('admin-ajax.php')
+    // Localiser le script pour passer des données de PHP à JS
+    wp_localize_script('contact-js', 'nathalie_mota_ajax', array(
+        'url' => admin_url('admin-ajax.php'),
+        'nonce' => wp_create_nonce('submit_contact_form_nonce')
     ));
 }
 add_action('wp_enqueue_scripts', 'nathalie_mota_enqueue_scripts');
+
 
 
 // Enregistrement du Custom Post Type pour les photos et les taxonomies personnalisées
@@ -388,6 +392,58 @@ function nathalie_mota_customizer_register($wp_customize) {
     )));
 }
 add_action('customize_register', 'nathalie_mota_customizer_register');
+
+// Formulaire de contact
+function submit_contact_form() {
+    // Vérifier les permissions
+    if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'submit_contact_form_nonce')) {
+        error_log('Nonce verification failed.');
+        wp_send_json_error(array('message' => 'Nonce verification failed.'));
+        return;
+    }
+
+    // Récupérer les données du formulaire
+    $name = isset($_POST['name']) ? sanitize_text_field($_POST['name']) : '';
+    $email = isset($_POST['email']) ? sanitize_email($_POST['email']) : '';
+    $photo_reference = isset($_POST['photo_reference']) ? sanitize_text_field($_POST['photo_reference']) : '';
+    $message = isset($_POST['message']) ? sanitize_textarea_field($_POST['message']) : '';
+
+    error_log('Name: ' . $name);
+    error_log('Email: ' . $email);
+    error_log('Photo Reference: ' . $photo_reference);
+    error_log('Message: ' . $message);
+
+    // Valider les données
+    if (empty($name) || empty($email) || empty($message)) {
+        error_log('Missing required fields.');
+        wp_send_json_error(array('message' => 'Veuillez remplir tous les champs obligatoires.'));
+        return;
+    }
+
+    // Envoyer un e-mail à l'administrateur
+    $to_admin = get_option('admin_email');
+    $subject_admin = "Nouveau message de $name";
+    $body_admin = "Nom: $name\nEmail: $email\nRéférence Photo: $photo_reference\nMessage: $message";
+    $headers = array('Content-Type: text/plain; charset=UTF-8');
+
+    $admin_email_sent = wp_mail($to_admin, $subject_admin, $body_admin, $headers);
+
+    // Envoyer un e-mail de confirmation à l'utilisateur
+    $to_user = $email;
+    $subject_user = "Confirmation de réception de votre message";
+    $body_user = "Bonjour $name,\n\nMerci pour votre message. Nous avons bien reçu votre demande et nous vous recontacterons sous peu.\n\nCordialement,\nNathalie Mota";
+    $user_email_sent = wp_mail($to_user, $subject_user, $body_user, $headers);
+
+    if ($admin_email_sent && $user_email_sent) {
+        error_log('Emails sent successfully.');
+        wp_send_json_success(array('message' => 'Votre message a bien été envoyé. Vous allez recevoir un e-mail de confirmation.'));
+    } else {
+        error_log('Failed to send email.');
+        wp_send_json_error(array('message' => 'Une erreur est survenue lors de l\'envoi de votre message.'));
+    }
+}
+add_action('wp_ajax_submit_contact_form', 'submit_contact_form');
+add_action('wp_ajax_nopriv_submit_contact_form', 'submit_contact_form');
 
 
 
