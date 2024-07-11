@@ -1,20 +1,22 @@
 jQuery(document).ready(function($) {
-    let contactModal = document.getElementById("contact-modal");
-    let contactButtons = document.querySelectorAll(".contact-menu-item a, .open-contact-modal");
-    let closeBtn = document.getElementsByClassName("close")[0];
+    var contactModal = document.getElementById("contact-modal");
+    var contactButtons = document.querySelectorAll(".contact-menu-item a, .open-contact-modal");
+    var closeBtn = document.getElementsByClassName("close")[0];
 
     if (contactModal && closeBtn) {
-        if (contactButtons.length > 0) {
-            contactButtons.forEach(function(button) {
-                button.addEventListener("click", function(event) {
-                    event.preventDefault(); // Empêche le comportement par défaut du lien
-                    console.log("Bouton de contact cliqué");
-                    contactModal.style.display = "block";
-                });
+        contactButtons.forEach(function(button) {
+            button.addEventListener("click", function(event) {
+                event.preventDefault(); // Empêche le comportement par défaut du lien
+                var photoReference = button.getAttribute("data-photo-reference");
+                if (photoReference) {
+                    document.getElementById("photo-reference").value = photoReference;
+                } else {
+                    document.getElementById("photo-reference").value = '';
+                }
+                console.log("Bouton de contact cliqué");
+                contactModal.style.display = "block";
             });
-        } else {
-            console.warn('Aucun bouton de contact trouvé');
-        }
+        });
 
         closeBtn.onclick = function() {
             console.log("Bouton de fermeture cliqué");
@@ -30,16 +32,16 @@ jQuery(document).ready(function($) {
 
         $("#contact-form").on("submit", function(e) {
             e.preventDefault();
-            let data = {
+            var data = {
                 action: 'submit_contact_form',
-                nonce: nathalie_mota_ajax.nonce, // Utilise le nonce localisé
+                nonce: nathalie_mota_ajax.nonce, // Utiliser le nonce localisé
                 name: $("#name").val(),
                 email: $("#email").val(),
                 photo_reference: $("#photo-reference").val(),
                 message: $("#message").val(),
             };
 
-            console.log('Données envoyées :', data); // Vérifie les données
+            console.log('Données envoyées :', data); //  Vérifie les données
 
             $.post(nathalie_mota_ajax.url, data, function(response) {
                 console.log('Réponse reçue :', response); // Vérifie la réponse

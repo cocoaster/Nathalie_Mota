@@ -32,7 +32,7 @@ get_header(); ?>
         <div class="contact-link">
             <p id="contact-request"><?php _e('Cette photo vous intéresse ?', 'nathalie-mota'); ?></p>
             <a href="#contact-modal" class="open-contact-modal" data-photo-reference="<?php echo esc_attr(get_post_meta(get_the_ID(), '_photo_reference', true)); ?>"><?php _e('Contact', 'nathalie-mota'); ?></a>
-        </div>
+            </div>
             
         <div class="navigation-links">
             <?php
