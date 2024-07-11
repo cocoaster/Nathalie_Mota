@@ -433,7 +433,7 @@ function submit_contact_form() {
     // Envoyer un e-mail de confirmation à l'utilisateur
     $to_user = $email;
     $subject_user = "Confirmation de réception de votre message";
-    $body_user = "Bonjour $name,\n\nMerci pour votre message. Nous avons bien reçu votre demande et nous vous recontacterons sous peu.\n\nCordialement,\nNathalie Mota";
+    $body_user = "Bonjour $name,\n\nMerci pour votre message. Nous avons bien reçu votre demande et nous vous recontacterons sous peu.\n\nCordialement,\nNathalie Mota.";
     $user_email_sent = wp_mail($to_user, $subject_user, $body_user, $headers);
 
     if ($admin_email_sent && $user_email_sent) {
