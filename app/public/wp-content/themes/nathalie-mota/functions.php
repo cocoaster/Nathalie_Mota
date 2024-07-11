@@ -468,6 +468,12 @@ function submit_contact_form() {
 add_action('wp_ajax_submit_contact_form', 'submit_contact_form');
 add_action('wp_ajax_nopriv_submit_contact_form', 'submit_contact_form');
 
+// Permettre le téléchargement de fichiers SVG
+function add_svg_to_upload_mimes($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'add_svg_to_upload_mimes');
 
 
 

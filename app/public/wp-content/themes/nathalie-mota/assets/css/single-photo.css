@@ -144,6 +144,7 @@
 .photo-item {
     position: relative;
     overflow: hidden;
+    height: 495px;
 }
 
 .photo-item:hover {
