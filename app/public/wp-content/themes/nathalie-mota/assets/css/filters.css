@@ -161,3 +161,52 @@
 .select-hide {
     display: none;
 }
+
+
+/* Extra large devices (large desktops, 1440px and up) */
+@media (min-width: 1440px) {
+    /* Vos styles ici pour les écrans de 1440px et plus */
+}
+
+/* Large devices (desktops, 1200px to 1439px) */
+@media (max-width: 1439px) {
+    /* Vos styles ici pour les écrans entre 1200px et 1439px */
+}
+
+/* Medium devices (tablets, 992px to 1199px) */
+@media (max-width: 1199px) {
+    /* Vos styles ici pour les écrans entre 992px et 1199px */
+}
+
+/* Small devices (large phones, 768px to 991px) */
+@media (max-width: 991px) {
+    /* Vos styles ici pour les écrans entre 768px et 991px */
+}
+
+/* Extra small devices (phones, 576px to 767px) */
+@media (max-width: 769px) {
+    #filters{
+        margin-top: 50px;
+    }
+    .select-selected::after{
+        height: 8px;
+        width: 8px;
+        font-size: 8px;
+        top: 14px;
+    }
+    .custom-select{
+   font-size: 12px;
+}
+    .custom-select::after{
+   font-size: 12px;
+}
+.select-arrow-active::after {
+   font-size: 10px;
+}
+
+}
+
+/* Extra extra small devices (phones, less than 576px) */
+@media (max-width: 575px) {
+    /* Vos styles ici pour les écrans de moins de 576px */
+}

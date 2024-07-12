@@ -19,7 +19,7 @@
     left: 0;
 }
 
-.hero-text {
+.hero-text h1 {
     width: 100%;
     position: absolute;
     top: 48%;
@@ -34,3 +34,43 @@
     font-weight: bold;
 }
 
+/* Extra large devices (large desktops, 1440px and up) */
+@media (max-width: 1540px) {
+    .hero-text h1  {
+        font-size: 3.9rem !important; 
+        letter-spacing: 4px; 
+    }
+}
+
+/* Large devices (desktops, 1200px to 1439px) */
+@media (max-width: 1439px) {
+    /* Vos styles ici pour les écrans entre 1200px et 1439px */
+}
+
+/* Medium devices (tablets, 992px to 1199px) */
+@media (max-width: 1199px) {
+    .hero-text  {
+        font-size: 3rem; 
+        letter-spacing: 4px; 
+    }
+}
+
+/* Small devices (large phones, 768px to 991px) */
+@media (max-width: 991px) {
+    /* Vos styles ici pour les écrans entre 768px et 991px */
+}
+
+/* Extra small devices (phones, 576px to 767px) */
+@media (max-width: 769px) {
+    .hero {
+        height: 662px;
+    }
+    .hero  img{
+        height: 662px;
+    }
+}
+
+/* Extra extra small devices (phones, less than 576px) */
+@media (max-width: 575px) {
+    /* Vos styles ici pour les écrans de moins de 576px */
+}
