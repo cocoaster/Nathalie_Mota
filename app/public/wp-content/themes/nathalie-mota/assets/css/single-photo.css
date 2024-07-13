@@ -123,7 +123,7 @@
     box-shadow: 0px 0px 6px rgba(0,0,0,0.5);
 }
 
-/* Sections d'intérêt et de photos associées */
+/* Section de photos associées */
 .bottom-section {
     border-top: 2px solid black;
     padding-top: 50px;
@@ -147,8 +147,6 @@
     margin-bottom: 130px !important;
 
 }
-
-
 
 .photo-link img {
     display: block;
@@ -218,3 +216,170 @@
 .photo-item:hover .overlay {
     opacity: 1;
 }
+
+
+/* Extra large devices (large desktops, 1440px and up) */
+@media (min-width: 1540px) {
+    /* Vos styles ici pour les écrans de 1440px et plus */
+    
+}
+
+/* Extra large devices (large desktops, 1440px and up) */
+@media (max-width: 1440px) {
+    .photo-fields-info h1 {
+      
+        font-size: 46px;
+       
+      }
+    .contact-link p {
+padding-top: 20px;      }
+    .contact-link a {
+        padding: 20px 90px;
+      
+      }
+      .photo-item {
+        height: 629px;
+      }
+}
+
+/* Large devices (desktops, 1400px to 992px) */
+@media (max-width: 1400px) {
+    .contact-link a {
+        padding: 20px 60px;
+      }
+    }
+
+/* Medium devices (tablets, 992px to 1199px) */
+@media (max-width: 1220px) {
+    .contact-link a {
+        padding: 20px 50px;
+      }
+}
+/* Medium devices (tablets, 992px to 1199px) */
+@media (max-width: 1200px) {
+    .contact-link a {
+        padding: 20px 30px;
+      }
+      .photo-item {
+        height: 529px;
+    }
+}
+/* Medium devices (tablets, 992px to 1199px) */
+@media (max-width: 1070px) {
+    .contact-link a {
+        padding: 20px 20px;
+      }
+}
+
+/* Small devices (large phones, 768px to 991px) */
+@media (max-width: 993px) {
+
+    #photo-details {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .photo-thumbnail, img {
+        width: 100%;
+       
+    }
+    .photo-fields-info {
+        width: 106%;
+        flex-direction: row;
+        justify-content: space-around;
+        
+    }
+    .photo-fields-info h1 {
+      
+        width: 45%;
+    }
+
+    .contact-link {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .photo-item {
+        height: 429px;
+    }
+}
+
+/* Extra small devices (phones, 576px to 767px) */
+@media (max-width: 767px) {
+    .navigation-links {
+        display: none;
+      }
+      .contact-link {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .related-photos {
+        margin-bottom: 60px !important;
+    }
+    .bottom-section {
+        border-top: 2px solid black;
+        padding-top: 30px;
+    }
+}
+
+/* Extra extra small devices (phones, less than 576px) */
+@media (max-width: 575px) {
+    .single-photo-container {
+        width: 100%;
+      }
+      .photo-thumbnail, img {
+        width: 80%;
+      }
+      .photo-title, .field-texts{
+        width: 83%;
+      }
+    .photo-fields-info {
+        padding-left: 35px;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        
+    }
+    #photo-details {
+        display: flex;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        margin: auto;
+       
+      }
+      #photo-interactions {
+        padding: 35px;
+        padding-top: 40px;
+      }
+      .contact-link {
+        flex-direction: column;
+        justify-content: center;
+        font-size: 14px;
+    }
+    .contact-link a {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        padding: 15px 20px;
+      }
+      .bottom-section {
+        padding-top: 10px;
+        text-align: center;
+        margin-bottom: 20px !important;
+      }
+
+      .related-section {
+        margin-bottom: 30px !important;
+        text-align: center;
+      }
+
+      .related-photos {
+        grid-template-columns: repeat(1, 1fr);      
+        width: 85%;
+    }
+    .photo-item {
+        height: 278px;
+      }
+}
+

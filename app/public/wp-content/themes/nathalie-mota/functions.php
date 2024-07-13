@@ -14,6 +14,8 @@ add_action('after_setup_theme', 'nathalie_mota_setup');
 // Enregistrement des scripts et styles
 function nathalie_mota_enqueue_scripts() {
     // Enregistrement des styles et scripts nécessaires
+    wp_enqueue_style('normalize-css', get_template_directory_uri() . '/assets/css/normalize.css');
+
     wp_enqueue_style('main-css', get_template_directory_uri() . '/assets/css/styles.css');
     wp_enqueue_style('lightbox-css', get_template_directory_uri() . '/assets/css/custom-lightbox.css');
     wp_enqueue_style('header-css', get_template_directory_uri() . '/assets/css/header.css'); 

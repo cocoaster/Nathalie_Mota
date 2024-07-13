@@ -9,12 +9,16 @@ get_header(); ?>
         
         <!-- Bloc de gauche (informations) -->
         <div class="photo-fields-info">
+            <div class="photo-title">
             <h1 class="field"><?php the_title(); ?></h1>
-            <p class="field"><?php echo __('Référence : ', 'nathalie-mota') . esc_html(get_post_meta(get_the_ID(), '_photo_reference', true)); ?></p>
-            <p class="field"><?php echo __('Catégorie : ', 'nathalie-mota') . strip_tags(get_the_term_list(get_the_ID(), 'category', '', ', ', '')); ?></p>
-            <p class="field"><?php echo __('Format : ', 'nathalie-mota') . strip_tags(get_the_term_list(get_the_ID(), 'format', '', ', ', '')); ?></p>
-            <p class="field"><?php echo __('Type : ', 'nathalie-mota') . esc_html(get_post_meta(get_the_ID(), 'Type', true)); ?></p>
-            <p class="field"><?php echo __('Année : ', 'nathalie-mota') . date('Y', strtotime(get_post_meta(get_the_ID(), '_photo_date', true))); ?></p>
+            </div>
+            <div class="field-texts">
+                <p class="field"><?php echo __('Référence : ', 'nathalie-mota') . esc_html(get_post_meta(get_the_ID(), '_photo_reference', true)); ?></p>
+                <p class="field"><?php echo __('Catégorie : ', 'nathalie-mota') . strip_tags(get_the_term_list(get_the_ID(), 'category', '', ', ', '')); ?></p>
+                <p class="field"><?php echo __('Format : ', 'nathalie-mota') . strip_tags(get_the_term_list(get_the_ID(), 'format', '', ', ', '')); ?></p>
+                <p class="field"><?php echo __('Type : ', 'nathalie-mota') . esc_html(get_post_meta(get_the_ID(), 'Type', true)); ?></p>
+                <p class="field"><?php echo __('Année : ', 'nathalie-mota') . date('Y', strtotime(get_post_meta(get_the_ID(), '_photo_date', true))); ?></p>
+            </div>
         </div>
 
         <!-- Bloc de droite (image) --> 

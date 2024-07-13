@@ -129,3 +129,5 @@
 [11-Jul-2024 03:47:27 UTC] Photo Reference: 
 [11-Jul-2024 03:47:27 UTC] Message: gg
 [11-Jul-2024 03:47:29 UTC] Emails sent successfully.
+[13-Jul-2024 17:30:10 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-customize-widgets.php on line 905
+[13-Jul-2024 17:30:18 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-customize-widgets.php on line 905
