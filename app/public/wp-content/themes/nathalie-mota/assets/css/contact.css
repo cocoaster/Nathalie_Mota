@@ -29,6 +29,9 @@
 
 }
 
+
+   
+
 #contact-form{
     display: flex;
     flex-direction: column;
@@ -110,5 +113,33 @@ button{
 
 /* Extra extra small devices (phones, less than 576px) */
 @media (max-width: 575px) {
-    /* Vos styles ici pour les écrans de moins de 576px */
+    .contact-modal-content{
+        margin-top: 50px;
+        padding-top: 135px;
+    }
+    #contact-header{
+       transform: scaleX(0.56);
+       right: -98%;
+    }
+ 
+    #contact-form {
+        align-items: baseline;
+        margin: auto;
+        margin-top: 0;
+        width: 85%;
+      }
+    #contact-form input{
+        width: 100%;
+      }
+    #contact-form textarea{
+        width: 100%;
+      }
+
+      .modal-contact-button {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 75px;
+        padding-right: 75px;
+       
+      }
 }
