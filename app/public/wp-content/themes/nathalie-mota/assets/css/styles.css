@@ -21,9 +21,17 @@
     font-weight: 700;
     src: url('../fonts/SpaceMono-Bold.ttf') format('truetype');
 }
+*, html, body{
+    margin: 0;
+}
 body {
     font-family: 'Space Mono', monospace;
     margin-top: 0;
+}
+
+/* Box Sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 .container{
@@ -90,5 +98,8 @@ i{
 
 /* Extra extra small devices (phones, less than 576px) */
 @media (max-width: 575px) {
-    /* Vos styles ici pour les écrans de moins de 576px */
+    html, body{
+        width: 100%;
+        overflow-x: hidden;
+    }
 }

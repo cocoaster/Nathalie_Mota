@@ -180,7 +180,24 @@
 
 /* Small devices (large phones, 768px to 991px) */
 @media (max-width: 991px) {
-    /* Vos styles ici pour les écrans entre 768px et 991px */
+    #filters{
+        margin-top: 50px;
+    }
+    .select-selected::after{
+        height: 8px;
+        width: 8px;
+        font-size: 8px;
+        top: 14px;
+    }
+    .custom-select{
+   font-size: 12px;
+}
+    .custom-select::after{
+   font-size: 12px;
+}
+.select-arrow-active::after {
+   font-size: 10px;
+}
 }
 
 /* Extra small devices (phones, 576px to 767px) */
@@ -208,5 +225,41 @@
 
 /* Extra extra small devices (phones, less than 576px) */
 @media (max-width: 575px) {
-    /* Vos styles ici pour les écrans de moins de 576px */
+
+#filters{
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+#left-filters{
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7px;
+    padding-right: 0;
+    gap: 7px;
+    width: 80%;
+
+}
+#right-filter{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+#category-select, #format-select, #order-select {
+    width: 100%;
+}
+.select-selected{
+    width: 100%;
+    padding-right: 0;
+    padding: 15px 20px;
+    border-radius: 8px;
+
+}
+
+ .select-selected::after {
+    right: 26px;
+    top: 18px;
+}
 }

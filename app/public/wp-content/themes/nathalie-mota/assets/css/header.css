@@ -56,6 +56,58 @@
     letter-spacing: 2px;
 }
 
+/* Styles pour le menu hamburger */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.hamburger-icon {
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    position: relative;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-icon::before {
+    top: -8px;
+}
+
+.hamburger-icon::after {
+    top: 8px;
+}
+
+/* Transform to cross */
+.hamburger-icon.open {
+    background-color: transparent;
+}
+
+.hamburger-icon.open::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.hamburger-icon.open::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
 /* Extra large devices (large desktops, 1440px and up) */
 @media (min-width: 1440px) {
     /* Vos styles ici pour les écrans de 1440px et plus */
@@ -103,7 +155,51 @@
 
 }
 
-/* Extra extra small devices (phones, less than 576px) */
+
+/* Extra small devices (phones, less than 576px) */
 @media (max-width: 575px) {
-    /* Vos styles ici pour les écrans de moins de 576px */
+
+    .hamburger {
+        display: block;
+        z-index: 20;
+        margin-bottom: 0 !important;
+    }
+
+    .main-navigation {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90.075px;
+        z-index: 10;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        border-top: 1px solid #ddd;
+    }
+
+    .main-navigation.active {
+        display: flex;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .nav-menu li a {
+        display: block;
+        padding: 15px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .logo .site-title a {
+        font-size: 20px;
+    }
 }
+

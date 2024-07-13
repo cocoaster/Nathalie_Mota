@@ -28,6 +28,7 @@ function nathalie_mota_enqueue_scripts() {
 
     wp_enqueue_script('jquery'); 
     wp_enqueue_script('custom-js', get_template_directory_uri() . '/assets/js/custom.js', array('jquery'), null, true);
+    wp_enqueue_script('header-js', get_template_directory_uri() . '/assets/js/header.js', array('jquery'), null, true);
     wp_enqueue_script('contact-js', get_template_directory_uri() . '/assets/js/contact.js', array('jquery'), null, true);
     wp_enqueue_script('filters-js', get_template_directory_uri() . '/assets/js/filters.js', array(), null, true);
     wp_enqueue_script('single-photo-js', get_template_directory_uri() . '/assets/js/single-photo.js', array(), null, true);

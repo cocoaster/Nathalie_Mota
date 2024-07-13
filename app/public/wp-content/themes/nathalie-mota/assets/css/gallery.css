@@ -146,5 +146,7 @@
 
 /* Extra extra small devices (phones, less than 576px) */
 @media (max-width: 575px) {
-    /* Vos styles ici pour les écrans de moins de 576px */
-}
+    #photo-list {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 85%;
+    }}

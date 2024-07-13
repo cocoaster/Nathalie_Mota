@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',function(){const hamburger=document.querySelector('.hamburger');const navigation=document.querySelector('.main-navigation');const hamburgerIcon=document.querySelector('.hamburger-icon');hamburger.addEventListener('click',function(){navigation.classList.toggle('active');hamburgerIcon.classList.toggle('open');});});

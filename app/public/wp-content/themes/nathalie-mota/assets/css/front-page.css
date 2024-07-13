@@ -29,6 +29,7 @@
     -webkit-text-stroke: 2px white; 
     font-family: 'Space Mono', monospace;
     font-size: 4rem; 
+    font-style: italic;
     text-transform: uppercase; 
     letter-spacing: 5px; 
     font-weight: bold;
@@ -57,7 +58,12 @@
 
 /* Small devices (large phones, 768px to 991px) */
 @media (max-width: 991px) {
-    /* Vos styles ici pour les écrans entre 768px et 991px */
+    .hero {
+        height: 662px;
+    }
+    .hero  img{
+        height: 662px;
+    }
 }
 
 /* Extra small devices (phones, 576px to 767px) */
@@ -72,5 +78,13 @@
 
 /* Extra extra small devices (phones, less than 576px) */
 @media (max-width: 575px) {
-    /* Vos styles ici pour les écrans de moins de 576px */
-}
+    .hero {
+        height: 253px;
+      }
+    .hero img {
+        height: 253px;
+      }
+    .hero-text h1 {
+        font-size: 1.6rem !important;
+        letter-spacing: 4px;
+      }}

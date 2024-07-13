@@ -14,6 +14,9 @@
                 <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
             </h1>
         </div>
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span class="hamburger-icon"></span>
+        </button>
         <nav class="main-navigation">
             <?php
             wp_nav_menu(array(
@@ -26,3 +29,7 @@
     </div>
 </header>
 <?php get_template_part('template-parts/contact-modal'); ?>
+
+<?php wp_footer(); ?>
+</body>
+</html>

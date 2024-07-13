@@ -80,7 +80,9 @@
 
 /* Small devices (large phones, 768px to 991px) */
 @media (max-width: 991px) {
-    /* Vos styles ici pour les écrans entre 768px et 991px */
+    .footer-menu li a {
+        font-size: 13px;
+    }
 }
 
 /* Extra small devices (phones, 576px to 767px) */
@@ -92,5 +94,12 @@
 
 /* Extra extra small devices (phones, less than 576px) */
 @media (max-width: 575px) {
-    /* Vos styles ici pour les écrans de moins de 576px */
-}
+    .footer-menu {
+        flex-direction: column;
+      }
+    .footer-menu li{
+        margin-left: auto;
+        margin-right: auto;
+      }
+    
+    }
