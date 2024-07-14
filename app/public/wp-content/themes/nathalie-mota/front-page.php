@@ -55,7 +55,7 @@ get_header(); ?>
         </div>
     </div>
     <div id="photo-list"></div>
-    <button id="load-more"><?php _e('Voir plus de photos', 'nathalie-mota'); ?></button>
+    <button id="load-more"><?php _e('Charger plus', 'nathalie-mota'); ?></button>
 
     <!-- Inclure la lightbox -->
     <?php get_template_part('template-parts/lightbox'); ?>

@@ -26,7 +26,7 @@
 #load-more {
     display: block;
     margin: 60px auto;
-    padding: 10px 20px;
+    padding: 20px 100px;
     font-family: 'Space Mono', monospace;
     font-size: 16px;
     border: none;
@@ -143,4 +143,9 @@
     #photo-list {
         grid-template-columns: repeat(1, 1fr);
         max-width: 85%;
-    }}
+    }
+
+    #load-more{
+        padding: 18px 60px;
+    }
+}
