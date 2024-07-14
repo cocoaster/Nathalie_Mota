@@ -12,7 +12,7 @@
 }
 
 .photo-fields-info {
-    width: 46%;
+    width: 48%;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -218,13 +218,8 @@
 }
 
 
-/* Extra large devices (large desktops, 1440px and up) */
-@media (min-width: 1540px) {
-    /* Vos styles ici pour les écrans de 1440px et plus */
-    
-}
+/* Media Queries */
 
-/* Extra large devices (large desktops, 1440px and up) */
 @media (max-width: 1440px) {
     .photo-fields-info h1 {
       
@@ -242,20 +237,20 @@ padding-top: 20px;      }
       }
 }
 
-/* Large devices (desktops, 1400px to 992px) */
+
 @media (max-width: 1400px) {
     .contact-link a {
         padding: 20px 60px;
       }
     }
 
-/* Medium devices (tablets, 992px to 1199px) */
+
 @media (max-width: 1220px) {
     .contact-link a {
         padding: 20px 50px;
       }
 }
-/* Medium devices (tablets, 992px to 1199px) */
+
 @media (max-width: 1200px) {
     .contact-link a {
         padding: 20px 30px;
@@ -264,14 +259,14 @@ padding-top: 20px;      }
         height: 529px;
     }
 }
-/* Medium devices (tablets, 992px to 1199px) */
+/* Tableetes */
 @media (max-width: 1070px) {
     .contact-link a {
         padding: 20px 20px;
       }
 }
 
-/* Small devices (large phones, 768px to 991px) */
+
 @media (max-width: 993px) {
 
     #photo-details {
@@ -304,7 +299,7 @@ padding-top: 20px;      }
     }
 }
 
-/* Extra small devices (phones, 576px to 767px) */
+
 @media (max-width: 767px) {
     .navigation-links {
         display: none;
@@ -322,7 +317,7 @@ padding-top: 20px;      }
     }
 }
 
-/* Extra extra small devices (phones, less than 576px) */
+/* Mobiles */
 @media (max-width: 575px) {
     .single-photo-container {
         width: 100%;

@@ -17,7 +17,7 @@ function nathalie_mota_enqueue_scripts() {
     wp_enqueue_style('normalize-css', get_template_directory_uri() . '/assets/css/normalize.css');
 
     wp_enqueue_style('main-css', get_template_directory_uri() . '/assets/css/styles.css');
-    wp_enqueue_style('lightbox-css', get_template_directory_uri() . '/assets/css/custom-lightbox.css');
+    wp_enqueue_style('lightbox-css', get_template_directory_uri() . '/assets/css/lightbox.css');
     wp_enqueue_style('header-css', get_template_directory_uri() . '/assets/css/header.css'); 
     wp_enqueue_style('footer-css', get_template_directory_uri() . '/assets/css/footer.css'); 
     wp_enqueue_style('front-page-css', get_template_directory_uri() . '/assets/css/front-page.css'); 
@@ -34,7 +34,7 @@ function nathalie_mota_enqueue_scripts() {
     wp_enqueue_script('contact-js', get_template_directory_uri() . '/assets/js/contact.js', array('jquery'), null, true);
     wp_enqueue_script('filters-js', get_template_directory_uri() . '/assets/js/filters.js', array(), null, true);
     wp_enqueue_script('single-photo-js', get_template_directory_uri() . '/assets/js/single-photo.js', array(), null, true);
-    wp_enqueue_script('custom-lightbox-js', get_template_directory_uri() . '/assets/js/custom-lightbox.js', array(), null, true);
+    wp_enqueue_script('lightbox-js', get_template_directory_uri() . '/assets/js/lightbox.js', array(), null, true);
 
     // Localiser le script pour passer des données de PHP à JS
     wp_localize_script('contact-js', 'nathalie_mota_ajax', array(

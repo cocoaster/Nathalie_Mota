@@ -163,7 +163,7 @@
 }
 
 
-/* Small devices (large phones, 768px to 991px) */
+/* Tablettes */
 @media (max-width: 991px) {
     #filters{
         margin-top: 50px;
@@ -185,7 +185,6 @@
 }
 }
 
-/* Extra small devices (phones, 576px to 767px) */
 @media (max-width: 769px) {
     #filters{
         margin-top: 50px;
@@ -208,7 +207,8 @@
 
 }
 
-/* Extra extra small devices (phones, less than 576px) */
+
+/* mobiles */
 @media (max-width: 575px) {
 
 #filters{

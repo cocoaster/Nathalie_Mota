@@ -13,7 +13,7 @@
 
 .logo .site-title a {
     text-decoration: none;
-    color: #E00000;
+    color: var(--primary-color);
     font-size: 24px;
     letter-spacing: 4px;
     font-weight: bold;
@@ -40,7 +40,7 @@
 }
 
 .main-navigation .nav-menu li a:hover {
-    color: #E00000;
+    color: var(--primary-color);
 }
 
 .nav-menu li a {
@@ -111,7 +111,8 @@
 
 
 
-/* Extra small devices (phones, less than 576px) */
+
+/* mobiles */
 @media (max-width: 575px) {
 
     .hamburger {
@@ -123,34 +124,48 @@
     .main-navigation {
         display: none;
         flex-direction: column;
+        color: #FFFFFF;
         position: absolute;
         top: 80px;
         z-index: 10;
         left: 0;
         width: 100%;
-        background: #fff;
-        border-top: 1px solid #ddd;
+        background: var(--primary-color);
+        overflow-y: hidden;
+        
     }
 
     .main-navigation.active {
         display: flex;
+        padding-top: 200px;
+        padding-bottom: 200px;
+        overflow-y: hidden;
+        height: 100vh;
     }
 
     .nav-menu {
         flex-direction: column;
         width: 100%;
+        padding-top: 100px;
+        padding-bottom: 200px;
+        
     }
 
     .nav-menu li {
         width: 100%;
         text-align: center;
         margin: 0;
+        color: #FFFFFF;
     }
 
     .nav-menu li a {
+        padding-bottom: 30px;
+        padding-top: 30px;
         display: block;
         padding: 15px 0;
-        border-bottom: 1px solid #ddd;
+        color: #FFFFFF !important;
+        font-weight: 200 !important;
+        font-size: 44px !important;
     }
 
     .logo .site-title a {

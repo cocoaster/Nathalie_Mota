@@ -64,21 +64,22 @@
 
 
 
-/* Small devices (large phones, 768px to 991px) */
+/* Tablettes */
 @media (max-width: 991px) {
     .footer-menu li a {
         font-size: 13px;
     }
 }
 
-/* Extra small devices (phones, 576px to 767px) */
+
 @media (max-width: 769px) {
     .footer-menu li a {
         font-size: 12px;
     }
 }
 
-/* Extra extra small devices (phones, less than 576px) */
+
+/* mobiles */
 @media (max-width: 575px) {
     .footer-menu {
         flex-direction: column;
