@@ -84,10 +84,25 @@
     border-radius: 0 3px 3px 0;
     user-select: none;
 }
+.custom-next, .custom-prev {
+    display: flex;
+    justify-content: space-between;
+}
 
 .custom-next {
     right: 4%;
     border-radius: 3px 0 0 3px;
+    
+}
+
+.fa-arrow-left-long{
+    margin-right: 10px;
+    margin-top: 2px;
+
+}
+.fa-arrow-right-long{
+    margin-left: 10px;
+    margin-top: 2px;
 }
 
 .custom-prev {
@@ -131,5 +146,12 @@
 
 /* Extra extra small devices (phones, less than 576px) */
 @media (max-width: 575px) {
-    /* Vos styles ici pour les écrans de moins de 576px */
+    .lightbox-content {
+        max-width: 62%;
+        max-height: 80%;
+      }
+      .arrow-text{
+        display: none;
+      }
+   
 }

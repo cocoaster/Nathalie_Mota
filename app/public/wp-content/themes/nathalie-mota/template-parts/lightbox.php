@@ -6,6 +6,6 @@
         <div class="caption"></div>
         <div class="category"></div>
     </div>
-    <a class="custom-prev"><i class="fas fa-arrow-left-long"></i> Précédente</a>
-    <a class="custom-next">Suivante <i class="fas fa-arrow-right-long"></i></a>
+    <a class="custom-prev"><i class="fas fa-arrow-left-long"></i> <p class="arrow-text" >Précédente</p></a>
+    <a class="custom-next"><p class="arrow-text" >Suivante </p><i class="fas fa-arrow-right-long"></i></a>
 </div>
