@@ -11,7 +11,7 @@ get_header(); ?>
             <img src="<?php echo esc_url(get_theme_mod('hero_image')); ?>" alt="Hero Image">
         <?php endif; ?>
         <div class="hero-text">
-            <h1>PHOTOGRAPHE EVENT</h1>
+            <h1 class="rotated-word" data-word="PHOTOGRAPHE EVENT"></h1>
         </div>
     </div>
     <div id="filters">

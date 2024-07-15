@@ -1,10 +1,10 @@
 function addLightboxEvents() {
-    var lightbox = document.getElementById('custom-lightbox');
-    var lightboxImg = document.getElementById('lightbox-img');
-    var caption = document.querySelector('.caption');
-    var categoryElement = document.querySelector('.category');
-    var currentImageIndex = 0;
-    var images = document.querySelectorAll('.photo-item');
+    let lightbox = document.getElementById('custom-lightbox');
+    let lightboxImg = document.getElementById('lightbox-img');
+    let caption = document.querySelector('.caption');
+    let categoryElement = document.querySelector('.category');
+    let currentImageIndex = 0;
+    let images = document.querySelectorAll('.photo-item');
 
     if (!lightbox || !lightboxImg || !caption || !categoryElement || images.length === 0) {
         console.warn('Lightbox elements or images not found');
@@ -12,13 +12,13 @@ function addLightboxEvents() {
     }
 
     images.forEach(function(image, index) {
-        var fullscreenElement = image.querySelector('.fullscreen');
+        let fullscreenElement = image.querySelector('.fullscreen');
         if (fullscreenElement) {
             fullscreenElement.addEventListener('click', function() {
                 currentImageIndex = index;
-                var imgSrc = image.getAttribute('data-full-image');
-                var imgReference = image.getAttribute('data-reference');
-                var imgCategory = image.getAttribute('data-category');
+                let imgSrc = image.getAttribute('data-full-image');
+                let imgReference = image.getAttribute('data-reference');
+                let imgCategory = image.getAttribute('data-category');
                 lightbox.style.display = 'block';
                 lightboxImg.src = imgSrc;
                 caption.textContent = ' ' + imgReference;
@@ -29,9 +29,9 @@ function addLightboxEvents() {
         }
     });
 
-    var closeElement = document.querySelector('.close');
-    var prevElement = document.querySelector('.custom-prev');
-    var nextElement = document.querySelector('.custom-next');
+    let closeElement = document.querySelector('.close');
+    let prevElement = document.querySelector('.custom-prev');
+    let nextElement = document.querySelector('.custom-next');
 
     if (closeElement) {
         closeElement.addEventListener('click', function() {
@@ -63,9 +63,9 @@ function addLightboxEvents() {
         if (currentImageIndex < 0 || currentImageIndex >= images.length) {
             return; // S'assurer que l'index est dans les limites du tableau
         }
-        var imgSrc = images[currentImageIndex].getAttribute('data-full-image');
-        var imgReference = images[currentImageIndex].getAttribute('data-reference');
-        var imgCategory = images[currentImageIndex].getAttribute('data-category');
+        let imgSrc = images[currentImageIndex].getAttribute('data-full-image');
+        let imgReference = images[currentImageIndex].getAttribute('data-reference');
+        let imgCategory = images[currentImageIndex].getAttribute('data-category');
         lightboxImg.src = imgSrc;
         caption.textContent = ' ' + imgReference;
         categoryElement.textContent = '' + imgCategory;

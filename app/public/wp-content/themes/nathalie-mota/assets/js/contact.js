@@ -1,14 +1,14 @@
 jQuery(document).ready(function($) {
-    var contactModal = document.getElementById("contact-modal");
-    var contactButtons = document.querySelectorAll(".contact-menu-item a, .open-contact-modal");
-    var closeBtn = document.getElementsByClassName("close")[0];
-    var contactForm = document.getElementById("contact-form");
+    let contactModal = document.getElementById("contact-modal");
+    let contactButtons = document.querySelectorAll(".contact-menu-item a, .open-contact-modal");
+    let closeBtn = document.getElementsByClassName("close")[0];
+    let contactForm = document.getElementById("contact-form");
 
     if (contactModal && closeBtn) {
         contactButtons.forEach(function(button) {
             button.addEventListener("click", function(event) {
                 event.preventDefault(); // Empêche le comportement par défaut du lien
-                var photoReference = button.getAttribute("data-photo-reference") || '';
+                let photoReference = button.getAttribute("data-photo-reference") || '';
                 document.getElementById("photo-reference").value = photoReference;
                 console.log("Bouton de contact cliqué");
                 contactModal.style.display = "block";
@@ -31,7 +31,7 @@ jQuery(document).ready(function($) {
 
         $("#contact-form").on("submit", function(e) {
             e.preventDefault();
-            var data = {
+            let data = {
                 action: 'submit_contact_form',
                 nonce: nathalie_mota_ajax.nonce, // Utiliser le nonce localisé
                 name: $("#name").val(),

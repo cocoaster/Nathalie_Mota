@@ -1,12 +1,12 @@
 jQuery(document).ready(function($) {
-    var totalPhotos = 0;
-    var loadedPhotos = 0;
+    let totalPhotos = 0;
+    let loadedPhotos = 0;
 
     function loadPhotos(resetFilters = false) {
-        var category = resetFilters ? '' : $('#category-filter').val() || '';
-        var format = resetFilters ? '' : $('#format-filter').val() || '';
-        var order = resetFilters ? 'DESC' : $('#order-filter').val() || 'DESC';
-        var data = {
+        let category = resetFilters ? '' : $('#category-filter').val() || '';
+        let format = resetFilters ? '' : $('#format-filter').val() || '';
+        let order = resetFilters ? 'DESC' : $('#order-filter').val() || 'DESC';
+        let data = {
             action: 'filter_photos',
             category: category,
             format: format,
@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
         console.log(data);
 
         $.post(nathalie_mota_ajax.url, data, function(response) {
-            var responseData = JSON.parse(response);
+            let responseData = JSON.parse(response);
             $('#photo-list').html(responseData.html);
             totalPhotos = responseData.total;
             loadedPhotos = $('#photo-list .photo-item').length;
@@ -36,7 +36,7 @@ jQuery(document).ready(function($) {
         $('#order-filter').val('DESC');
         
         $('.select-selected').each(function() {
-            var defaultText = $(this).siblings('select').find('option:selected').text();
+            let defaultText = $(this).siblings('select').find('option:selected').text();
             $(this).text(defaultText);
         });
 
@@ -48,7 +48,7 @@ jQuery(document).ready(function($) {
     });
 
     $('#load-more').click(function() {
-        var offset = $('#photo-list .photo-item').length;
+        let offset = $('#photo-list .photo-item').length;
 
         if (loadedPhotos >= totalPhotos) {
             if (!$('#category-filter').val() && !$('#format-filter').val() && $('#order-filter').val() === 'DESC') {
@@ -61,10 +61,10 @@ jQuery(document).ready(function($) {
             }
         }
 
-        var category = $('#category-filter').val() || '';
-        var format = $('#format-filter').val() || '';
-        var order = $('#order-filter').val() || 'DESC';
-        var data = {
+        let category = $('#category-filter').val() || '';
+        let format = $('#format-filter').val() || '';
+        let order = $('#order-filter').val() || 'DESC';
+        let data = {
             action: 'load_more_photos',
             offset: offset,
             category: category,
@@ -75,7 +75,7 @@ jQuery(document).ready(function($) {
         console.log(data);
 
         $.post(nathalie_mota_ajax.url, data, function(response) {
-            var responseData = JSON.parse(response);
+            let responseData = JSON.parse(response);
             $('#photo-list').append(responseData.html);
             loadedPhotos += responseData.loaded;
             addLightboxEvents();
@@ -87,7 +87,7 @@ jQuery(document).ready(function($) {
     loadPhotos();
 
     // Personnaliser les sélecteurs
-    var x, i, j, selElmnt, a, b, c;
+    let x, i, j, selElmnt, a, b, c;
     x = document.getElementsByClassName("custom-select");
     for (i = 0; i < x.length; i++) {
         selElmnt = x[i].getElementsByTagName("select")[0];
@@ -101,7 +101,7 @@ jQuery(document).ready(function($) {
             c = document.createElement("DIV");
             c.innerHTML = selElmnt.options[j].innerHTML;
             c.addEventListener("click", function(e) {
-                var y, i, k, s, h;
+                let y, i, k, s, h;
                 s = this.parentNode.parentNode.getElementsByTagName("select")[0];
                 h = this.parentNode.previousSibling;
                 for (i = 0; i < s.length; i++) {
@@ -131,7 +131,7 @@ jQuery(document).ready(function($) {
     }
 
     function closeAllSelect(elmnt) {
-        var x, y, i, arrNo = [];
+        let x, y, i, arrNo = [];
         x = document.getElementsByClassName("select-items");
         y = document.getElementsByClassName("select-selected");
         for (i = 0; i < y.length; i++) {

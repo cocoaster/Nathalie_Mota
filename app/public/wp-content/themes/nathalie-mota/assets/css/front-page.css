@@ -8,7 +8,11 @@
     justify-content: center;
     position: relative;
     text-align: center; 
+    opacity: 0; /* Start with hidden */
+    transform: translateY(-50px); /* Initial position */
+    transition: opacity 2s, transform 2s;
 }
+
 
 .hero img {
     width: 100%;
@@ -33,6 +37,30 @@
     text-transform: uppercase; 
     letter-spacing: 5px; 
     font-weight: bold;
+}
+
+.rotated-word {
+    display: inline-block;
+}
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+    transform: rotateY(0deg) translateZ(-100px);
+    transition: transform 2s, opacity 2s;
+}
+
+.letter.visible {
+    opacity: 1;
+    transform: rotateY(360deg) translateZ(0);
+}
+
+.letter.space {
+    display: inline-block;
+    width: 0.5em; /* Adjust this value to control space width */
+    transform: none;
+    transition: none;
+    opacity: 1;
 }
 
 /* Media Queries */
