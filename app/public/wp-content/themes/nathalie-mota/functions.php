@@ -25,6 +25,8 @@ function nathalie_mota_enqueue_scripts() {
     wp_enqueue_style('filters-css', get_template_directory_uri() . '/assets/css/filters.css'); 
     wp_enqueue_style('single-photo-css', get_template_directory_uri() . '/assets/css/single-photo.css'); 
     wp_enqueue_style('contact-css', get_template_directory_uri() . '/assets/css/contact.css'); 
+    wp_enqueue_style('animations-css', get_template_directory_uri() . '/assets/css/animations.css'); 
+
     wp_enqueue_style('404-css', get_template_directory_uri() . '/assets/css/404.css'); 
     wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
 
@@ -170,11 +172,12 @@ function save_photo_details($post_id) {
         update_post_meta($post_id, '_photo_reference', sanitize_text_field($_POST['photo_reference']));
     }
     if (isset($_POST['photo_type'])) { // Sauvegarder le champ personnalisé "type"
-        update_post_meta($post_id, '_photo_type', sanitize_text_field($_POST['photo_type']));
+        update_post_meta($post_id, 'Type', sanitize_text_field($_POST['photo_type']));
     }
 }
 
 add_action('save_post', 'save_photo_details');
+
 
 // Enregistrement des scripts AJAX pour les filtres et la pagination
 function nathalie_mota_ajax_scripts() {

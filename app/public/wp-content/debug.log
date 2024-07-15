@@ -131,3 +131,6 @@
 [11-Jul-2024 03:47:29 UTC] Emails sent successfully.
 [13-Jul-2024 17:30:10 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-customize-widgets.php on line 905
 [13-Jul-2024 17:30:18 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-customize-widgets.php on line 905
+[15-Jul-2024 00:51:53 UTC] PHP Fatal error:  Cannot redeclare render_photo_details_meta_box() (previously declared in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php:102) in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\functions.php on line 140
+[15-Jul-2024 00:51:53 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 367
+[15-Jul-2024 00:51:53 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 368

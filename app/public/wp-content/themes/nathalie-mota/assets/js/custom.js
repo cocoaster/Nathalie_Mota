@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const hero = document.querySelector('.hero');
     const wordContainer = document.querySelector('.rotated-word');
+    if (!wordContainer) {
+        console.error('wordContainer is null');
+        return;
+    }
     const word = wordContainer.getAttribute('data-word');
 
     // Function to reveal the hero section
@@ -35,5 +39,3 @@ document.addEventListener('DOMContentLoaded', function() {
     // Animate letters after a slight delay to sync with hero reveal
     setTimeout(animateLetters, 2500); // Adjust the delay to start after hero reveal
 });
-
-

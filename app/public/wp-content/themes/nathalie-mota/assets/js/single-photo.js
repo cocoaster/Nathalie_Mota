@@ -9,15 +9,10 @@ jQuery(document).ready(function($) {
     const prevLink = $('.navigation-links .prev');
     const nextLink = $('.navigation-links .next');
 
-    console.log('Previous Link:', prevLink);
-    console.log('Next Link:', nextLink);
-
     if (prevLink.length) {
         prevLink.hover(
             function() {
-                console.log('Hover over prev link:', this);
                 const thumbnailSrc = $(this).data('thumbnail');
-                console.log('Thumbnail URL (prev):', thumbnailSrc);
                 $('#thumbnail-image').attr('src', thumbnailSrc);
                 $('#thumbnail-preview').css('display', 'block');
             },
@@ -32,9 +27,7 @@ jQuery(document).ready(function($) {
     if (nextLink.length) {
         nextLink.hover(
             function() {
-                console.log('Hover over next link:', this);
                 const thumbnailSrc = $(this).data('thumbnail');
-                console.log('Thumbnail URL (next):', thumbnailSrc);
                 $('#thumbnail-image').attr('src', thumbnailSrc);
                 $('#thumbnail-preview').css('display', 'block');
             },
@@ -68,5 +61,9 @@ jQuery(document).ready(function($) {
     });
 
     // Initialiser la lightbox
-    addLightboxEvents();
+    if (typeof addLightboxEvents === 'function') {
+        addLightboxEvents();
+    } else {
+        console.error('addLightboxEvents function is not defined');
+    }
 });

@@ -54,7 +54,24 @@ get_header(); ?>
             </div>
         </div>
     </div>
-    <div id="photo-list"></div>
+    <div id="photo-list">
+        <?php
+        // Query to get the photos
+        $photos = new WP_Query(array(
+            'post_type' => 'photo',
+            'posts_per_page' => 8,
+        ));
+        
+        if ($photos->have_posts()) :
+            while ($photos->have_posts()) : $photos->the_post();
+                get_template_part('template-parts/photo-item');
+            endwhile;
+            wp_reset_postdata();
+        else :
+            echo '<p>' . __('No photos found', 'nathalie-mota') . '</p>';
+        endif;
+        ?>
+    </div>
     <button id="load-more"><?php _e('Charger plus', 'nathalie-mota'); ?></button>
 
     <!-- Inclure la lightbox -->
