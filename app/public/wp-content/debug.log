@@ -297,3 +297,5 @@ Stack trace:
 #7 C:\Users\jaill\Local Sites\nathalie-mota\app\public\index.php(17): require('C:\\Users\\jaill\\...')
 #8 {main}
   thrown in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\themes\nathalie-mota\template-parts\lightbox.php on line 10
+[25-Jul-2024 03:44:41 UTC] PHP Notice:  tempnam(): file created in the system's temporary directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\plugins\wp-super-cache\wp-cache-phase2.php on line 1428
+[25-Jul-2024 03:44:41 UTC] PHP Notice:  tempnam(): file created in the system's temporary directory in C:\Users\jaill\Local Sites\nathalie-mota\app\public\wp-content\plugins\wp-super-cache\wp-cache-phase2.php on line 1428

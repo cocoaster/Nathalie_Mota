@@ -23,7 +23,6 @@ function addLightboxEvents() {
                 lightboxImg.src = imgSrc;
                 caption.textContent = ' ' + imgReference;
                 categoryElement.textContent = '' + imgCategory;
-                resizeLightboxContainer();
             });
         } else {
             console.warn('Fullscreen element not found for image index ' + index);
@@ -62,7 +61,7 @@ function addLightboxEvents() {
 
     function updateLightbox() {
         if (currentImageIndex < 0 || currentImageIndex >= images.length) {
-            return; // S'assurer que l'index est dans les limites du tableau
+            return; // Ensure the index is within the bounds of the array
         }
         let imgSrc = images[currentImageIndex].getAttribute('data-full-image');
         let imgReference = images[currentImageIndex].getAttribute('data-reference');
@@ -70,10 +69,9 @@ function addLightboxEvents() {
         lightboxImg.src = imgSrc;
         caption.textContent = ' ' + imgReference;
         categoryElement.textContent = '' + imgCategory;
-        resizeLightboxContainer();
     }
 
-    // Fermer la lightbox en cliquant à l'extérieur de l'image
+    // Close the lightbox when clicking outside the image
     lightbox.addEventListener('click', function(event) {
         if (event.target === lightbox || event.target.classList.contains('close')) {
             lightbox.style.display = 'none';
@@ -81,20 +79,7 @@ function addLightboxEvents() {
     });
 }
 
-// function resizeLightboxContainer() {
-//     var lightboxImg = document.getElementById('lightbox-img');
-//     var lightboxContainer = document.querySelector('.lightbox-container');
-//     var infoContainer = document.getElementById('lightbox-photo-datas');
-//     lightboxImg.addEventListener('load', function() {
-//         lightboxContainer.style.width = lightboxImg.clientWidth + 'px';
-//         infoContainer.style.width = lightboxImg.clientWidth + 'px';
-//     });
-// }
 
-document.addEventListener('DOMContentLoaded', function() {
-    addLightboxEvents();
-    document.getElementById('lightbox-img').addEventListener('load', resizeLightboxContainer);
-});
 
 jQuery(document).ready(function($) {
     let totalPhotos = 0;
@@ -116,7 +101,7 @@ jQuery(document).ready(function($) {
             $('#photo-list').html(responseData.html);
             totalPhotos = responseData.total;
             loadedPhotos = $('#photo-list .photo-item').length;
-            addLightboxEvents();
+            addLightboxEvents(); // This line ensures lightbox events are re-initialized after new photos are loaded
         }).fail(function(jqXHR, textStatus, errorThrown) {
             console.error('Error: ' + textStatus, errorThrown);
         });
@@ -130,6 +115,7 @@ jQuery(document).ready(function($) {
         let offset = $('#photo-list .photo-item').length;
 
         if (loadedPhotos >= totalPhotos) {
+            $(this).hide(); // Hide the load more button when all photos are loaded
             return;
         }
 
@@ -148,7 +134,7 @@ jQuery(document).ready(function($) {
             let responseData = JSON.parse(response);
             $('#photo-list').append(responseData.html);
             loadedPhotos += responseData.loaded;
-            addLightboxEvents();
+            addLightboxEvents(); // This line ensures lightbox events are re-initialized after new photos are appended
         }).fail(function(jqXHR, textStatus, errorThrown) {
             console.error('Error: ' + textStatus, errorThrown);
         });

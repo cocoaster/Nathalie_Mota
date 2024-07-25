@@ -185,7 +185,7 @@ function save_photo_details($post_id) {
 add_action('save_post', 'save_photo_details');
 
 
-// Enregistrement des scripts AJAX pour les filtres et la pagination
+/// Enregistrement des scripts AJAX pour les filtres et la pagination
 function nathalie_mota_ajax_scripts() {
     wp_localize_script('custom-js', 'nathalie_mota_ajax', array(
         'url' => admin_url('admin-ajax.php')
@@ -227,7 +227,7 @@ function filter_photos() {
         }
 
         $photos = new WP_Query($args);
-        $total_photos = $photos->found_posts; // Nombre total de photos disponibles
+        $total_photos = $photos->found_posts;
 
         ob_start();
         render_photo_html($photos);
@@ -284,7 +284,7 @@ function load_more_photos() {
     }
 
     $photos = new WP_Query($args);
-    $loaded_photos = $photos->post_count; // Nombre de photos chargées
+    $loaded_photos = $photos->post_count;
 
     ob_start();
     render_photo_html($photos);
@@ -300,6 +300,7 @@ function load_more_photos() {
 
 add_action('wp_ajax_load_more_photos', 'load_more_photos');
 add_action('wp_ajax_nopriv_load_more_photos', 'load_more_photos');
+
 
 
 

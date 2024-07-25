@@ -5,16 +5,19 @@ WP-Cache Config Sample File
 See wp-cache.php for author details.
 */
 
+$wp_cache_home_path = '/';
+$wp_cache_slash_check = 1;
+$cache_page_secret = '734d5f169e74b9348e03cc00abfac764';
 $cache_time_interval = 600;
 if ( ! defined('WPCACHEHOME') )
 	define( 'WPCACHEHOME', WP_CONTENT_DIR . "/plugins/wp-super-cache/" );
 
 $cache_compression = 0; // Super cache compression
-$cache_enabled = false;
+$cache_enabled = true;
 $super_cache_enabled = true;
 $cache_max_time = 1800;
 //$use_flock = true; // Set it true or false if you know what to use
-$cache_path = WP_CONTENT_DIR . '/cache/';
+$cache_path = 'C:\\Users\\jaill\\LocalSites\\nathalie-mota\\app\\public\\wp-content/cache/';
 $file_prefix = 'wp-cache-';
 $ossdlcdn = 0;
 

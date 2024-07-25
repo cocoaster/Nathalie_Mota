@@ -34,6 +34,7 @@ jQuery(document).ready(function($) {
         let offset = $('#photo-list .photo-item').length;
 
         if (loadedPhotos >= totalPhotos) {
+            $('#load-more').hide();
             return;
         }
 
@@ -55,6 +56,10 @@ jQuery(document).ready(function($) {
             $('#photo-list').append(responseData.html);
             loadedPhotos += responseData.loaded;
             addLightboxEvents();
+
+            if (loadedPhotos >= totalPhotos) {
+                $('#load-more').hide();
+            }
         }).fail(function(jqXHR, textStatus, errorThrown) {
             console.error('Error: ' + textStatus, errorThrown);
         });
