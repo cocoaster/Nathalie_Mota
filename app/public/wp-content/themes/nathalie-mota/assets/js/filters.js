@@ -3,9 +3,9 @@ jQuery(document).ready(function($) {
     let loadedPhotos = 0;
 
     function loadPhotos(resetFilters = false) {
-        let category = resetFilters ? '' : $('#category-filter').val() || '';
-        let format = resetFilters ? '' : $('#format-filter').val() || '';
-        let order = resetFilters ? 'DESC' : $('#order-filter').val() || 'DESC';
+        let category = $('#category-filter').val() || '';
+        let format = $('#format-filter').val() || '';
+        let order = $('#order-filter').val() || 'DESC';
         let data = {
             action: 'filter_photos',
             category: category,
@@ -21,26 +21,9 @@ jQuery(document).ready(function($) {
             totalPhotos = responseData.total;
             loadedPhotos = $('#photo-list .photo-item').length;
             addLightboxEvents();
-
-            if (resetFilters) {
-                resetFilterSelectors();
-            }
         }).fail(function(jqXHR, textStatus, errorThrown) {
             console.error('Error: ' + textStatus, errorThrown);
         });
-    }
-
-    function resetFilterSelectors() {
-        $('#category-filter').val('');
-        $('#format-filter').val('');
-        $('#order-filter').val('DESC');
-        
-        $('.select-selected').each(function() {
-            let defaultText = $(this).siblings('select').find('option:selected').text();
-            $(this).text(defaultText);
-        });
-
-        $('.select-items .same-as-selected').removeClass('same-as-selected');
     }
 
     $('#category-filter, #format-filter, #order-filter').change(function() {
@@ -51,14 +34,7 @@ jQuery(document).ready(function($) {
         let offset = $('#photo-list .photo-item').length;
 
         if (loadedPhotos >= totalPhotos) {
-            if (!$('#category-filter').val() && !$('#format-filter').val() && $('#order-filter').val() === 'DESC') {
-                alert("Toutes les photos sont déjà chargées.");
-                return;
-            } else {
-                loadPhotos(true);
-                alert("Il n'y a plus de photos à afficher correspondant à votre sélection. Réinitialisation des filtres.");
-                return;
-            }
+            return;
         }
 
         let category = $('#category-filter').val() || '';

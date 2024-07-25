@@ -128,12 +128,17 @@ function render_photo_html($photos) {
         $categories = get_the_terms(get_the_ID(), 'category');
         $category_names = wp_list_pluck($categories, 'name');
         $full_image_url = wp_get_attachment_url(get_post_thumbnail_id());
+        $image_meta = wp_get_attachment_metadata(get_post_thumbnail_id());
+        $original_width = $image_meta['width'];
+        $original_height = $image_meta['height'];
         $reference = get_post_meta(get_the_ID(), '_photo_reference', true);
         ?>
         <div class="photo-item" 
              data-full-image="<?php echo esc_attr($full_image_url); ?>" 
              data-reference="<?php echo esc_attr($reference); ?>" 
-             data-category="<?php echo esc_attr(implode(', ', $category_names)); ?>">
+             data-category="<?php echo esc_attr(implode(', ', $category_names)); ?>"
+             data-original-width="<?php echo esc_attr($original_width); ?>"
+             data-original-height="<?php echo esc_attr($original_height); ?>">
             <a href="<?php the_permalink(); ?>" class="photo-link">
                 <?php if (has_post_thumbnail()) : ?>
                     <?php the_post_thumbnail('medium_large'); ?>
@@ -154,6 +159,7 @@ function render_photo_html($photos) {
     endwhile;
     wp_reset_postdata();
 }
+
  
 function save_photo_details($post_id) {
     if (!isset($_POST['photo_details_nonce']) || !wp_verify_nonce($_POST['photo_details_nonce'], 'save_photo_details')) {

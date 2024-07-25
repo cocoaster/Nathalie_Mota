@@ -23,6 +23,7 @@ function addLightboxEvents() {
                 lightboxImg.src = imgSrc;
                 caption.textContent = ' ' + imgReference;
                 categoryElement.textContent = '' + imgCategory;
+                resizeLightboxContainer();
             });
         } else {
             console.warn('Fullscreen element not found for image index ' + index);
@@ -69,6 +70,7 @@ function addLightboxEvents() {
         lightboxImg.src = imgSrc;
         caption.textContent = ' ' + imgReference;
         categoryElement.textContent = '' + imgCategory;
+        resizeLightboxContainer();
     }
 
     // Fermer la lightbox en cliquant à l'extérieur de l'image
@@ -79,6 +81,78 @@ function addLightboxEvents() {
     });
 }
 
+// function resizeLightboxContainer() {
+//     var lightboxImg = document.getElementById('lightbox-img');
+//     var lightboxContainer = document.querySelector('.lightbox-container');
+//     var infoContainer = document.getElementById('lightbox-photo-datas');
+//     lightboxImg.addEventListener('load', function() {
+//         lightboxContainer.style.width = lightboxImg.clientWidth + 'px';
+//         infoContainer.style.width = lightboxImg.clientWidth + 'px';
+//     });
+// }
+
 document.addEventListener('DOMContentLoaded', function() {
     addLightboxEvents();
+    document.getElementById('lightbox-img').addEventListener('load', resizeLightboxContainer);
+});
+
+jQuery(document).ready(function($) {
+    let totalPhotos = 0;
+    let loadedPhotos = 0;
+
+    function loadPhotos() {
+        let category = $('#category-filter').val() || '';
+        let format = $('#format-filter').val() || '';
+        let order = $('#order-filter').val() || 'DESC';
+        let data = {
+            action: 'filter_photos',
+            category: category,
+            format: format,
+            order: order,
+        };
+
+        $.post(nathalie_mota_ajax.url, data, function(response) {
+            let responseData = JSON.parse(response);
+            $('#photo-list').html(responseData.html);
+            totalPhotos = responseData.total;
+            loadedPhotos = $('#photo-list .photo-item').length;
+            addLightboxEvents();
+        }).fail(function(jqXHR, textStatus, errorThrown) {
+            console.error('Error: ' + textStatus, errorThrown);
+        });
+    }
+
+    $('#category-filter, #format-filter, #order-filter').change(function() {
+        loadPhotos();
+    });
+
+    $('#load-more').click(function() {
+        let offset = $('#photo-list .photo-item').length;
+
+        if (loadedPhotos >= totalPhotos) {
+            return;
+        }
+
+        let category = $('#category-filter').val() || '';
+        let format = $('#format-filter').val() || '';
+        let order = $('#order-filter').val() || 'DESC';
+        let data = {
+            action: 'load_more_photos',
+            offset: offset,
+            category: category,
+            format: format,
+            order: order,
+        };
+
+        $.post(nathalie_mota_ajax.url, data, function(response) {
+            let responseData = JSON.parse(response);
+            $('#photo-list').append(responseData.html);
+            loadedPhotos += responseData.loaded;
+            addLightboxEvents();
+        }).fail(function(jqXHR, textStatus, errorThrown) {
+            console.error('Error: ' + textStatus, errorThrown);
+        });
+    });
+
+    loadPhotos();
 });

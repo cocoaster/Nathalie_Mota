@@ -183,6 +183,9 @@
 .select-arrow-active::after {
    font-size: 10px;
 }
+.arrow-text{
+    display: none;
+}
 }
 
 @media (max-width: 769px) {
