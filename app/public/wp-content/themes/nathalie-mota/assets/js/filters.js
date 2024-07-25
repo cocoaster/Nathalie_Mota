@@ -13,11 +13,16 @@ jQuery(document).ready(function($) {
             order: order,
         };
 
-        console.log(data);
+        console.log('Loading photos with data:', data);
 
         $.post(nathalie_mota_ajax.url, data, function(response) {
             let responseData = JSON.parse(response);
-            $('#photo-list').html(responseData.html);
+            console.log('Photos loaded:', responseData);
+            if (resetFilters) {
+                $('#photo-list').html(responseData.html);
+            } else {
+                $('#photo-list').append(responseData.html);
+            }
             totalPhotos = responseData.total;
             loadedPhotos = $('#photo-list .photo-item').length;
             addLightboxEvents();
@@ -27,11 +32,13 @@ jQuery(document).ready(function($) {
     }
 
     $('#category-filter, #format-filter, #order-filter').change(function() {
-        loadPhotos();
+        console.log('Filter changed');
+        loadPhotos(true);
     });
 
     $('#load-more').click(function() {
         let offset = $('#photo-list .photo-item').length;
+        console.log('Load more clicked');
 
         if (loadedPhotos >= totalPhotos) {
             $('#load-more').hide();
@@ -49,10 +56,11 @@ jQuery(document).ready(function($) {
             order: order,
         };
 
-        console.log(data);
+        console.log('Loading more photos with data:', data);
 
         $.post(nathalie_mota_ajax.url, data, function(response) {
             let responseData = JSON.parse(response);
+            console.log('More photos loaded:', responseData);
             $('#photo-list').append(responseData.html);
             loadedPhotos += responseData.loaded;
             addLightboxEvents();
@@ -65,7 +73,8 @@ jQuery(document).ready(function($) {
         });
     });
 
-    loadPhotos();
+    console.log('Initial load photos');
+    loadPhotos(true);
 
     // Personnaliser les sélecteurs
     let x, i, j, selElmnt, a, b, c;
@@ -98,7 +107,7 @@ jQuery(document).ready(function($) {
                     }
                 }
                 h.click();
-                loadPhotos();
+                loadPhotos(true);
             });
             b.appendChild(c);
         }

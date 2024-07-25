@@ -195,6 +195,7 @@ add_action('wp_enqueue_scripts', 'nathalie_mota_ajax_scripts');
 
 // Filtrer les photos via AJAX
 function filter_photos() {
+    error_log('Executing filter_photos');
     try {
         $category = isset($_POST['category']) ? sanitize_text_field($_POST['category']) : '';
         $format = isset($_POST['format']) ? sanitize_text_field($_POST['format']) : '';
@@ -251,6 +252,7 @@ add_action('wp_ajax_nopriv_filter_photos', 'filter_photos');
 
 // Charger plus de photos via AJAX
 function load_more_photos() {
+    error_log('Executing load_more_photos');
     $offset = isset($_POST['offset']) ? intval($_POST['offset']) : 0;
     $category = isset($_POST['category']) ? sanitize_text_field($_POST['category']) : '';
     $format = isset($_POST['format']) ? sanitize_text_field($_POST['format']) : '';
